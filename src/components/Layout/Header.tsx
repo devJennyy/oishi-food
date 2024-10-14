@@ -1,8 +1,9 @@
 import { useState } from "react";
-import DarkModeToggle from "../DarkModeToggle";
+
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
 import { IoMdClose } from "react-icons/io";
+import DarkModeToggle from "./DarkModeToggle";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
