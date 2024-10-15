@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between xl:px-11 px-6 items-center w-full absolute top-0 left-0 py-5">
+    <div className="flex justify-between xl:px-16 px-6 items-center max-w-[1440px] w-full absolute top-0 py-5">
       <div className="h-full">
         <img
           src="/oishi-food-text-logo.svg"
