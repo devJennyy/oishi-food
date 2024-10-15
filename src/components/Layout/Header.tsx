@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { RxHamburgerMenu } from "react-icons/rx";
-import { motion, AnimatePresence } from "framer-motion"; // Import framer-motion
+import { motion, AnimatePresence } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import DarkModeToggle from "./DarkModeToggle";
 
@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between xl:px-[75px] px-6 items-center max-w-[1440px] w-full absolute top-0 py-9 z-50">
+    <div className="flex justify-between 2xl:px-[75px] xl:px-7 px-6 items-center max-w-[1440px] w-full absolute top-0 py-9 z-50">
       <div className="h-full">
         <img
           src="/oishi-food-text-logo.svg"
