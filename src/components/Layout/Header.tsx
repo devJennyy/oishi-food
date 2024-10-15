@@ -19,23 +19,28 @@ const Header = () => {
   };
 
   return (
-    <div className="flex justify-between xl:px-16 px-6 items-center max-w-[1440px] w-full absolute top-0 py-5">
+    <div className="flex justify-between xl:px-[75px] px-6 items-center max-w-[1440px] w-full absolute top-0 py-9 z-50">
       <div className="h-full">
         <img
           src="/oishi-food-text-logo.svg"
           alt="oishi-food-text-logo"
-          className="xl:w-full lg:w-36 w-32"
+          className="xl:w-full lg:w-36 w-32 dark:hidden"
+        />
+        <img
+          src="/dark-oishi-food-text-logo.svg"
+          alt="oishi-food-text-logo"
+          className="xl:w-full lg:w-36 w-32 hidden dark:flex"
         />
       </div>
 
       {/* Desktop Links */}
-      <div className="hidden lg:flex justify-center items-center xl:text-lg xl:gap-10 lg:gap-7 tracking-wide">
+      <div className="hidden lg:flex justify-center items-center xl:text-lg xl:gap-9 lg:gap-7 tracking-wide">
+        <a href="">How It Works</a>
         <a href="">Our Menu</a>
         <a href="">Testimonials</a>
         <a href="">Pricing</a>
-        <a href="">How it Works</a>
         <div className="flex gap-4">
-        <a href="" className="py-2 px-6 bg-secondary text-white rounded-full">
+        <a href="" className="py-[9px] px-4 bg-secondary text-white rounded-full">
           <p>Download App</p>
         </a>
         <DarkModeToggle />
