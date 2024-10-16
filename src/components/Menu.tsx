@@ -1,22 +1,22 @@
 const ramenMenu = [
   {
-    image: "/images/sample-3.svg",
-    title: "Lorem Ipsum",
+    image: "/images/ramen-dish-one.svg",
+    title: "Spicy Garlic Ramen",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+      "Chunky rayu broth, roasted pork, spring onion, bamboo shoots, bonito, marinated egg and noodles.",
   },
   {
-    image: "/images/sample-3.svg",
-    title: "Lorem Ipsum",
+    image: "/images/ramen-dish-two.svg",
+    title: "Sesame Veggie Ramen",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+      "Spicy miso broth, tofu, coriander, spring onion, bamboo shoots, marinated egg and noodles.",
     imageSize: "320px",
   },
   {
-    image: "/images/sample-3.svg",
-    title: "Lorem Ipsum",
+    image: "/images/ramen-dish-three.svg",
+    title: "Spicy Kimchi Ramen",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+      "Shoyu broth, roasted pork, spring onion, coriander, kimchi, marinated egg and noodles.",
   },
 ];
 
@@ -43,7 +43,7 @@ const Menu = () => {
         </div>
       </div>
 
-      <div className="md:flex justify-center items-center md:gap-12 w-full h-full xl:mt-16 mt-10 hidden">
+      <div className="md:flex justify-center items-center xl:gap-20 md:gap-12 w-full h-full xl:mt-16 mt-10 hidden">
         {ramenMenu.map((item, index) => (
           <div
             key={index}
@@ -57,10 +57,10 @@ const Menu = () => {
                 }`}
               />
             </div>
-            <p className="text-secondary text-2xl font-semibold xl:mt-5 mt-3">
+            <p className="text-secondary text-2xl font-semibold xl:mt-9 lg:mt-3 mt-3 lg:h-9 h-16">
               {item.title}
             </p>
-            <p className="lg:max-w-[243px] lg:text-[16px] text-sm">{item.description}</p>
+            <p className="lg:max-w-[243px] lg:text-[16px] text-sm h-20">{item.description}</p>
           </div>
         ))}
       </div>
