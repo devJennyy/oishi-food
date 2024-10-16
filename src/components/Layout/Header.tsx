@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
@@ -23,64 +22,67 @@ const Header = () => {
       <div className="h-full">
         <img
           src="/oishi-food-text-logo.svg"
-          alt="oishi-food-text-logo"
+          alt="Oishi Food Logo"
           className="xl:w-full lg:w-36 w-32 dark:hidden"
         />
         <img
           src="/dark-oishi-food-text-logo.svg"
-          alt="oishi-food-text-logo"
+          alt="Oishi Food Logo"
           className="xl:w-full lg:w-36 w-32 hidden dark:flex"
         />
       </div>
 
       {/* Desktop Links */}
       <div className="hidden lg:flex justify-center items-center xl:text-lg xl:gap-9 lg:gap-7 tracking-wide">
-        <a href="">How It Works</a>
-        <a href="">Our Menu</a>
-        <a href="">Testimonials</a>
-        <a href="">Pricing</a>
+        <a href="#">How It Works</a>
+        <a href="#">Our Menu</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Pricing</a>
         <div className="flex gap-4">
-        <a href="" className="py-[9px] px-4 bg-secondary text-white rounded-full">
-          <p>Download App</p>
-        </a>
-        <DarkModeToggle />
+          <a
+            href="#"
+            className="py-[9px] px-4 bg-secondary text-white rounded-full"
+          >
+            <p>Download App</p>
+          </a>
+          <DarkModeToggle />
         </div>
       </div>
 
       <div className="lg:hidden">
-        <RxHamburgerMenu className="text-3xl" onClick={toggleMenu} />
+        <RxHamburgerMenu className="text-3xl cursor-pointer" onClick={toggleMenu} />
       </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="text-2xl font-medium fixed inset-0 flex justify-center items-center backdrop-blur-md bg-[#FFA6A6]/20 p-5 rounded-lg shadow-lg z-50 flex-col gap-8 lg:hidden"
+            className="fixed inset-0 flex justify-center items-center backdrop-blur-md bg-white/30 p-5 shadow-xl z-50 flex-col gap-8 lg:hidden"
             initial="hidden"
             animate="visible"
             exit="exit"
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             variants={variants}
           >
             <button
               onClick={toggleMenu}
-              className="absolute top-5 right-5 text-3xl font-bold text-black dark:text-white"
+              className="absolute top-5 right-5 text-3xl font-bold text-black/80 dark:text-white/80"
             >
               <IoMdClose />
             </button>
 
             {/* Mobile Links */}
-            <a href="" onClick={toggleMenu}>
+            <a href="#" onClick={toggleMenu} className="text-primary/90 dark:text-white/70 font-black text-2xl">
               Our Menu
             </a>
-            <a href="" onClick={toggleMenu}>
+            <a href="#" onClick={toggleMenu} className="text-primary/90 dark:text-white/70 font-black text-2xl">
               Testimonials
             </a>
-            <a href="" onClick={toggleMenu}>
+            <a href="#" onClick={toggleMenu} className="text-primary/90 dark:text-white/70 font-black text-2xl">
               Pricing
             </a>
-            <a href="" onClick={toggleMenu}>
-              How it Works
+            <a href="#" onClick={toggleMenu} className="text-primary/90 dark:text-white/70 font-black text-2xl">
+              How It Works
             </a>
             <DarkModeToggle />
           </motion.div>
