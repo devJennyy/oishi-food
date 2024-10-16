@@ -6,7 +6,7 @@ const Hero = () => {
       id="hero"
       className="flex md:flex-row flex-col justify-between pb-10 max-w-[1440px] w-full mx-auto 2xl:px-[75px] xl:px-7 px-6 relative overflow-x-hidden overflow-y-scroll no-scrollbar"
     >
-      <div className="absolute top-[-70rem] right-[-70rem] ">
+      <div className="absolute top-[-60rem] right-[-60rem] 3xl:hidden">
         <img src="/images/ellipse.svg" className="w-full bg-cover" />
       </div>
 
