@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="flex md:flex-row flex-col justify-between w-full overflow-x-hidden overflow-y-scroll no-scrollbar"
+      className="flex md:flex-row flex-col justify-between max-w-[1440px] w-full mx-auto 2xl:px-[75px] xl:px-7 px-6 relative overflow-x-hidden overflow-y-scroll no-scrollbar"
     >
       <div className="flex flex-col text-left gap-4 xl:pt-[250px] lg:pt-48 md:pt-32 sm:pt-48 pt-36">
         <div className="flex justify-center items-center gap-2 py-2 px-3 bg-secondary/10 w-fit rounded-full lg:mb-3 sm:mb-0 mb-2">

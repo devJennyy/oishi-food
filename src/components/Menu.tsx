@@ -22,7 +22,7 @@ const ramenMenu = [
 
 const Menu = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center lg:gap-8 gap-5 mt-[-2rem] md:mt-0">
+    <div id="menu" className="max-w-[1440px] mx-auto w-full flex flex-col justify-center items-center lg:gap-8 gap-5 mt-[-2rem] md:mt-0 2xl:px-[75px] xl:px-7 px-6">
       <p className="lg:text-5xl md:text-4xl text-5xl font-semibold">What’s on our Plate</p>
       <div className="lg:max-w-[48rem] md:max-w-[38rem] max-w-[30rem] w-full">
         <p className="text-lg opacity-80">
@@ -32,15 +32,15 @@ const Menu = () => {
         </p>
       </div>
       <div className="flex lg:gap-7 gap-5 mt-4">
-        <div className="px-5 py-2 rounded-full lg:border-2 border border-secondary bg-secondary text-white tracking-wide">
+        <button className="px-5 py-2 rounded-full lg:border-2 border border-secondary text-secondary dark:text-white tracking-wide">
           <p className="lg:text-[16px] text-sm">Ramen</p>
-        </div>
-        <div className="px-5 py-2 rounded-full lg:border-2 border border-primary/40 tracking-wide text-primary/50">
+        </button>
+        <button className="px-5 py-2 rounded-full lg:border-2 border border-primary/40 dark:border-white/40 tracking-wide text-primary/50 dark:text-white/50">
           <p className="lg:text-[16px] text-sm">Desserts</p>
-        </div>
-        <div className="px-5 py-2 rounded-full lg:border-2 border border-primary/40 tracking-wide text-primary/50">
+        </button>
+        <button className="px-5 py-2 rounded-full lg:border-2 border border-primary/40 dark:border-white/40 tracking-wide text-primary/50 dark:text-white/50">
           <p className="lg:text-[16px] text-sm">Lunch</p>
-        </div>
+        </button>
       </div>
 
       <div className="md:flex justify-center items-center xl:gap-20 md:gap-12 w-full h-full xl:mt-16 mt-10 hidden">

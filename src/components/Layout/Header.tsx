@@ -4,7 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import DarkModeToggle from "./DarkModeToggle";
 
-const navLinks = ["Our Menu", "Testimonials", "Pricing", "How It Works"];
+const navLinks = [{ label: "Our Menu", href: "#menu" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "How It Works", href: "#how-it-works" }];
 
 const toggleAnimation = {
   hidden: { opacity: 0, x: "100%" },
@@ -32,13 +35,16 @@ const Header = () => {
       </div>
 
       <nav className="hidden lg:flex items-center xl:text-lg xl:gap-9 lg:gap-7 tracking-wide">
-        {navLinks.slice(0, 3).map((label) => (
-          <a key={label} href="#">
+        {navLinks.slice(0, 3).map(({ label, href }) => (
+          <a key={label} href={href}>
             {label}
           </a>
         ))}
         <div className="flex gap-4">
-          <a href="#" className="py-[9px] px-4 bg-secondary text-white rounded-full">
+          <a
+            href="#"
+            className="py-[9px] px-4 bg-secondary text-white rounded-full"
+          >
             <p>Download App</p>
           </a>
           <DarkModeToggle />
@@ -46,7 +52,10 @@ const Header = () => {
       </nav>
 
       <div className="lg:hidden">
-        <RxHamburgerMenu className="text-3xl cursor-pointer" onClick={toggleMenu} />
+        <RxHamburgerMenu
+          className="text-3xl cursor-pointer"
+          onClick={toggleMenu}
+        />
       </div>
       <AnimatePresence>
         {isOpen && (
@@ -62,10 +71,10 @@ const Header = () => {
               className="absolute top-5 right-5 text-3xl font-bold text-black/80 dark:text-white/80"
               onClick={toggleMenu}
             />
-            {navLinks.map((label) => (
+            {navLinks.map(({ label, href }) => (
               <a
                 key={label}
-                href="#"
+                href={href}
                 onClick={toggleMenu}
                 className="text-primary/90 dark:text-white/70 font-black text-2xl"
               >
