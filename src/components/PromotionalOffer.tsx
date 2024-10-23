@@ -4,43 +4,69 @@ const PromotionalOffer = () => {
       id="promotional-offer"
       className="max-w-[1440px] mx-auto w-full flex flex-col justify-center items-center lg:gap-32 sm:gap-10 gap-5 mt-[7rem] md:mt-10 2xl:px-[75px] xl:px-7 px-6"
     >
-      <div className="flex w-full h-[614px] rounded-[30px] bg-secondary/5 relative overflow-hidden">
-        <div className="flex flex-col justify-center h-full w-full max-w-[32rem] gap-4 text-left pl-24">
-          <p className="font-bold text-xl tracking-widest text-secondary">
+      <div className="flex w-full xl:h-[614px] lg:h-[500px] md:h-[370px] h-[340px] rounded-[30px] bg-secondary/5 relative overflow-hidden">
+        <div className="flex flex-col justify-center h-full w-full xl:max-w-[32rem] lg:max-w-[29rem] md:max-w-[20rem] max-w-[15.5rem] xl:gap-4 lg:gap-3 gap-2 text-left xl:pl-24 lg:pl-16 md:pl-12 pl-8">
+          <p className="font-bold xl:text-xl lg:text-lg md:text-[16px] text-sm tracking-widest text-secondary">
             Try for Free
           </p>
-          <p className="font-bold text-5xl leading-[3.5rem]">
+          <p className="font-bold xl:text-5xl lg:text-4xl md:text-3xl text-2xl xl:leading-[3.5rem] md:leading-normal leading-tight">
             Claim your free first meal today!
           </p>
-          <p className="font-medium text-lg py-4">
+          <p className="font-medium xl:text-lg md:text-[16px] text-[13px] xl:py-4 py-3">
             Savor the best hot & tasty ramen with OmniFood, delivered straight
             to your door in no time!
           </p>
-          <button className="px-7 py-4 bg-secondary/90 rounded-full w-fit">
-            <p className="text-xl text-white">Get The App</p>
+          <button className="xl:px-7 xl:py-4 lg:px-6 lg:py-3 md:px-5 px-4 py-2 md:py-2 bg-secondary/90 rounded-full w-fit">
+            <p className="xl:text-xl lg:text-lg md:text-[16px] text-[13px] text-white">
+              Get The App
+            </p>
           </button>
         </div>
 
         <div className="flex justify-center items-center">
           <img
             src="/images/step-one-guide.png"
-            className="w-[352px] h-[715px] absolute right-[3rem] top-[3.5rem]"
+            className="xl:w-[352px] xl:h-[715px] lg:w-[275px] lg:h-[565px] md:w-[185px] w-[165px] h-full md:object-cover absolute lg:right-[3rem] right-[2rem] top-[3.5rem]"
           />
           <img
             src="/images/order-food-ui.png"
-            className="w-[352px] h-[715px] absolute top-[12rem] right-[15rem]"
+            className="xl:w-[352px] xl:h-[715px] lg:w-[275px] lg:h-[565px] md:w-[185px] w-[165px] h-full md:object-cover absolute xl:top-[12rem] xl:right-[15rem] lg:top-[10rem] lg:right-[12rem] 
+            top-[7.5rem] right-[8rem]"
           />
-          <div className="w-fit py-3 px-7 bg-white rounded-full drop-shadow-md z-10 absolute bottom-24 right-[33.5rem]">
-            <p className="text-secondary font-medium text-[22px]">
+          <img
+            src="/favicons/yum-icon.svg"
+            className="object-cover z-20 absolute top-5 right-7 lg:w-9 w-7"
+          />
+          <img
+            src="/favicons/wire-vector.svg"
+            className="object-cover lg:w-11 md:w-8 w-6 z-20 absolute xl:top-[10rem] xl:right-[35rem] lg:top-[8rem] lg:right-[27rem] md:top-[6.2rem] md:right-[17.5rem] 
+            top-[6.5rem] right-[16.5rem]"
+          />
+          <img
+            src="/favicons/circle-medium.svg"
+            className="md:w-[10px] w-2 object-cover z-20 absolute xl:top-[6rem] xl:right-[27rem] lg:right-[22rem] top-[5rem] md:right-[15rem] right-[13.5rem]"
+          />
+          <img
+            src="/favicons/circle-small.svg"
+            className="object-cover z-20 absolute top-[10rem] lg:right-5 right-4"
+          />
+          <img
+            src="/favicons/circle-yellow.svg"
+            className="object-cover z-20 absolute xl:bottom-[11rem] xl:right-[43rem] lg:bottom-[9.5rem] lg:right-[33.5rem] md:bottom-[7.5rem] md:right-[23rem] right-[21rem] bottom-[5.5rem]"
+          />
+          <div
+            className="w-fit lg:py-3 lg:px-7 py-2 px-4 bg-white rounded-full drop-shadow-md z-10 absolute xl:bottom-24 xl:right-[33.5rem] lg:bottom-20 lg:right-[26.5rem]
+          md:bottom-16 md:right-[17rem] bottom-10 right-[16.5rem]"
+          >
+            <p className="text-secondary font-medium 2xl:text-[22px] xl:text-xl lg:text-[16px] md:text-sm text-[10px]">
               Never cook again!
             </p>
           </div>
-          <img src="/favicons/noto-fire.svg" className="object-cover z-20 absolute bottom-[8.5rem] left-[32rem]" />
-          <img src="/favicons/yum-icon.svg" className="object-cover z-20 absolute top-5 right-7" />
-          <img src="/favicons/wire-vector.svg" className="object-cover z-20 absolute top-[10rem] right-[35rem]" />
-          <img src="/favicons/circle-medium.svg" className="object-cover z-20 absolute top-[6rem] right-[27rem]" />
-          <img src="/favicons/circle-small.svg" className="object-cover z-20 absolute top-[10rem] right-5" />
-          <img src="/favicons/circle-yellow.svg" className="object-cover z-20 absolute bottom-[11rem] left-[38rem]" />
+          <img
+            src="/favicons/noto-fire.svg"
+            className="xl:w-8 lg:w-7 w-5 object-cover z-20 absolute 2xl:right-[46.5rem] xl:right-[45.5rem] lg:right-[36.5rem] md:right-[25rem] right-[22.5rem] xl:bottom-[8.5rem] lg:bottom-[7rem] md:bottom-[5.5rem]
+            bottom-16"
+          />
         </div>
       </div>
     </div>
