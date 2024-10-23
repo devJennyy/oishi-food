@@ -6,7 +6,6 @@ import DarkModeToggle from "./DarkModeToggle";
 
 const navLinks = [{ label: "Our Menu", href: "#menu" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Pricing", href: "#pricing" },
   { label: "How It Works", href: "#how-it-works" }];
 
 const toggleAnimation = {

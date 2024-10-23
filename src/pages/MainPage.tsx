@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import HowItWorks from "../components/HowItWOrks";
 import Menu from "../components/Menu";
 import Testimonials from "../components/Testimonials";
 
@@ -11,6 +12,7 @@ const MainPage = () => {
       <Hero />
       <Menu />
       <Testimonials />
+      <HowItWorks />
     </div>
   );
 };
