@@ -4,26 +4,26 @@ const PromotionalOffer = () => {
       id="promotional-offer"
       className="max-w-[1440px] mx-auto w-full flex flex-col justify-center items-center lg:gap-32 sm:gap-10 gap-5 mt-[7rem] md:mt-10 2xl:px-[75px] xl:px-7 px-6"
     >
-      <div className="flex w-full xl:h-[614px] lg:h-[500px] md:h-[370px] h-[340px] rounded-[30px] bg-secondary/5 relative overflow-hidden">
-        <div className="flex flex-col justify-center h-full w-full xl:max-w-[32rem] lg:max-w-[29rem] md:max-w-[20rem] max-w-[15.5rem] xl:gap-4 lg:gap-3 gap-2 text-left xl:pl-24 lg:pl-16 md:pl-12 pl-8">
-          <p className="font-bold xl:text-xl lg:text-lg md:text-[16px] text-sm tracking-widest text-secondary">
+      <div className="flex sm:flex-row flex-col w-full xl:h-[614px] lg:h-[500px] md:h-[370px] sm:h-[340px] h-full sm:rounded-[30px] rounded-2xl bg-secondary/5 relative overflow-hidden">
+        <div className="flex flex-col sm:justify-center h-full w-full xl:max-w-[32rem] lg:max-w-[29rem] md:max-w-[20rem] sm:max-w-[15.5rem] xl:gap-4 lg:gap-3 sm:gap-2 gap-3 text-left xl:pl-24 lg:pl-16 md:pl-12 sm:pl-8 p-10 sm:p-0">
+          <p className="font-bold xl:text-xl lg:text-lg md:text-[16px] sm:text-sm tracking-widest text-secondary">
             Try for Free
           </p>
-          <p className="font-bold xl:text-5xl lg:text-4xl md:text-3xl text-2xl xl:leading-[3.5rem] md:leading-normal leading-tight">
+          <p className="font-bold xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-3xl xl:leading-[3.5rem] md:leading-normal leading-tight">
             Claim your free first meal today!
           </p>
-          <p className="font-medium xl:text-lg md:text-[16px] text-[13px] xl:py-4 py-3">
+          <p className="font-medium xl:text-lg md:text-[16px] sm:text-[13px] xl:py-4 py-3">
             Savor the best hot & tasty ramen with OmniFood, delivered straight
             to your door in no time!
           </p>
-          <button className="xl:px-7 xl:py-4 lg:px-6 lg:py-3 md:px-5 px-4 py-2 md:py-2 bg-secondary/90 rounded-full w-fit">
-            <p className="xl:text-xl lg:text-lg md:text-[16px] text-[13px] text-white">
+          <button className="xl:px-7 xl:py-4 lg:px-6 lg:py-3 md:px-5 sm:py-2 sm:px-4 px-5 py-[11px] bg-secondary/90 rounded-full w-fit">
+            <p className="xl:text-xl lg:text-lg md:text-[16px] sm:text-[13px] text-white">
               Get The App
             </p>
           </button>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="sm:flex justify-center items-center hidden">
           <img
             src="/images/step-one-guide.png"
             className="xl:w-[352px] xl:h-[715px] lg:w-[275px] lg:h-[565px] md:w-[185px] w-[165px] h-full md:object-cover absolute lg:right-[3rem] right-[2rem] top-[3.5rem]"
