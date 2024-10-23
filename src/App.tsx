@@ -7,6 +7,7 @@ import {
 import "./App.css";
 import Header from "./components/Layout/Header";
 import MainPage from "./pages/MainPage";
+import Footer from "./components/Layout/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Navigate to="/homepage" replace />} />
           <Route path="/homepage" element={<MainPage />} />
         </Routes>
+          <Footer />
       </div>
     </Router>
   );

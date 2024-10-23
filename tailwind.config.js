@@ -19,6 +19,7 @@ module.exports = {
         secondary: "#F54748",
         tertiary: "#FDC55E",
         amberGlow: "#F6AA1C",
+        lightGray: "#EDEDED",
       },
     },
   },
