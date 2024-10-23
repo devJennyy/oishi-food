@@ -41,10 +41,10 @@ const Header = () => {
         ))}
         <div className="flex gap-4">
           <a
-            href="#"
-            className="py-[9px] px-4 bg-secondary text-white rounded-full"
+            href="#promotional-offer"
+            className="py-[9px] px-7 bg-secondary text-white rounded-full"
           >
-            <p>Download App</p>
+            <p>Try for free</p>
           </a>
           <DarkModeToggle />
         </div>

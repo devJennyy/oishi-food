@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import Menu from "../components/Menu";
+import PromotionalOffer from "../components/PromotionalOffer";
 import Testimonials from "../components/Testimonials";
 
 const MainPage = () => {
@@ -13,6 +14,7 @@ const MainPage = () => {
       <Menu />
       <Testimonials />
       <HowItWorks />
+      <PromotionalOffer/>
     </div>
   );
 };
