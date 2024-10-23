@@ -3,7 +3,7 @@ import { RiMotorbikeFill } from "react-icons/ri";
 const Hero = () => {
   const buttons = [
     { text: "Order Now", style: "bg-secondary text-white" },
-    { text: "Learn More", style: "border border-secondary dark:border-white text-secondary dark:text-white" },
+    { text: "Explore Food", style: "border border-secondary dark:border-white text-secondary dark:text-white" },
   ];
 
   return (

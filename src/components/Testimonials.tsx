@@ -54,7 +54,7 @@ const Testimonials = () => {
             </p>
             <div className="flex items-center gap-5 mt-5 xl:mt-5 md:mt-3">
               <div className="rounded-full p-7 xl:p-9 bg-secondary w-fit"></div>
-              <div className="flex flex-col">
+              <div className="flex flex-col text-start">
                 <div className="flex items-center gap-1 text-amberGlow">
                   <FaStar className="text-sm xl:text-[15px]" />
                   <p className="font-black leading-tight text-sm xl:text-lg md:text-[16px] sm:text-lg">

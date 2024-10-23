@@ -22,8 +22,18 @@ const ramenMenu = [
 
 const Menu = () => {
   return (
-    <div id="menu" className="max-w-[1440px] mx-auto w-full flex flex-col justify-center items-center lg:gap-8 gap-5 mt-[-2rem] md:mt-0 2xl:px-[75px] xl:px-7 px-6">
-      <p className="lg:text-5xl md:text-4xl text-5xl font-semibold">What’s on our Plate</p>
+    <div
+      id="menu"
+      className="max-w-[1440px] mx-auto w-full flex flex-col justify-center items-center lg:gap-8 gap-5 mt-[-2rem] md:mt-0 2xl:px-[75px] xl:px-7 px-6"
+    >
+      <div className="flex flex-col gap-2">
+        <p className="font-bold capitalize text-secondary sm:text-xl text-lg tracking-wider">
+          Menu
+        </p>
+        <p className="lg:text-5xl md:text-4xl text-5xl lg:font-semibold sm:font-bold font-black sm:leading-tight">
+          What’s on our <span className="text-secondary">Plate</span>
+        </p>
+      </div>
       <div className="lg:max-w-[48rem] md:max-w-[38rem] max-w-[30rem] w-full">
         <p className="text-lg opacity-80">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -60,7 +70,9 @@ const Menu = () => {
             <p className="text-secondary text-2xl font-semibold xl:mt-9 lg:mt-3 mt-3 lg:h-9 h-16">
               {item.title}
             </p>
-            <p className="lg:max-w-[243px] lg:text-[16px] text-sm h-20">{item.description}</p>
+            <p className="lg:max-w-[243px] lg:text-[16px] text-sm h-20">
+              {item.description}
+            </p>
           </div>
         ))}
       </div>
