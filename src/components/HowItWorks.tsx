@@ -52,14 +52,14 @@ const HowItWorks = () => {
               }`}
             >
               <div
-                className={`flex flex-col justify-center w-full h-full lg:gap-3 gap-2 text-left ${
+                className={`flex flex-col justify-center w-full h-full lg:gap-4 gap-2 text-left ${
                   step.classname ? step.classname : "pl-0"
                 }`}
               >
-                <p className="text-secondary/50 dark:text-secondary xl:text-[6rem] lg:text-[4.5rem] text-[3.7rem] font-black leading-none">
+                <p className="text-secondary/50 dark:text-secondary xl:text-[5.8rem] lg:text-[4.5rem] text-[3.7rem] font-black leading-none">
                   0{step.numberCount}
                 </p>
-                <p className="xl:text-5xl lg:text-[2rem] text-2xl font-black capitalize">{step.title} <span className="dark:text-tertiary text-secondary">{step.subtitle}</span></p>
+                <p className="xl:text-[2.5rem] lg:text-[2rem] text-2xl font-black capitalize">{step.title} <span className="dark:text-tertiary text-secondary">{step.subtitle}</span></p>
                 <p className="text-medium xl:text-xl xl:mt-7 lg:mt-4 mt-3 leading-relaxed opacity-85 xl:max-w-[36.5rem] max-w-[29rem] w-full lg:text-[16px] text-sm">
                   {step.description}
                 </p>
