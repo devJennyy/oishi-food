@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 375px) {
+  .smallphone {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .mediumphone {
+    font-size: 2.9rem;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

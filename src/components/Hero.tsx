@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
 
         <div className="sm:max-w-[36rem] max-w-[20rem] w-full">
-          <p className="font-black xl:text-[3.7rem] lg:text-[3.3rem] md:text-[2.4rem] tracking-tight sm:tracking-normal sm:text-[3.5rem] iphone14:text-[2.9rem] iphoneSE:text-[2.5rem] lg:leading-[4.7rem] md:leading-[3.5rem] sm:leading-[4.5rem]">
+          <p className="font-black xl:text-[3.7rem] lg:text-[3.3rem] md:text-[2.4rem] tracking-tight sm:tracking-normal sm:text-[3.5rem] mediumphone:text-[2.9rem] smallphone:text-[2.5rem] lg:leading-[4.7rem] md:leading-[3.5rem] sm:leading-[4.5rem]">
             Your Favourite Food Delivered{" "}
             <span className="text-secondary">Hot</span> &{" "}
             <span className="text-tertiary">Fresh</span>.
