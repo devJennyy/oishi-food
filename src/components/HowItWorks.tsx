@@ -33,7 +33,7 @@ const HowItWorks = () => {
   return (
     <div
       id="how-it-works"
-      className="max-w-[1440px] mx-auto w-full flex flex-col justify-center items-center lg:gap-32 sm:gap-10 gap-5 mt-[7rem] md:mt-0 2xl:px-[75px] xl:px-7 px-6"
+      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full lg:py-16 py-12 lg:gap-32 sm:gap-10 gap-5 2xl:px-[75px] xl:px-7 px-5"
     >
       <div className="flex flex-col gap-2">
         <p className="font-bold capitalize text-secondary sm:text-xl text-lg tracking-wider">

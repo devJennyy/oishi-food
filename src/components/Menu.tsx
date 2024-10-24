@@ -24,18 +24,18 @@ const Menu = () => {
   return (
     <div
       id="menu"
-      className="max-w-[1440px] mx-auto w-full flex flex-col justify-center items-center lg:gap-8 gap-5 mt-[-2rem] md:mt-0 2xl:px-[75px] xl:px-7 px-6"
+      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full py-12 lg:gap-8 gap-5 2xl:px-[75px] xl:px-7 px-5"
     >
       <div className="flex flex-col gap-2">
         <p className="font-bold capitalize text-secondary sm:text-xl text-lg tracking-wider">
           Menu
         </p>
-        <p className="lg:text-5xl md:text-4xl text-5xl lg:font-semibold sm:font-bold font-black sm:leading-tight">
+        <p className="lg:text-5xl md:text-4xl sm:text-5xl text-4xl lg:font-semibold sm:font-bold font-black sm:leading-tight leading-[2.7rem] sm:w-full max-w-[20rem] w-full">
           What’s on our <span className="text-secondary">Plate</span>
         </p>
       </div>
       <div className="lg:max-w-[48rem] md:max-w-[38rem] max-w-[30rem] w-full">
-        <p className="text-lg opacity-80">
+        <p className="sm:text-lg opacity-80">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s

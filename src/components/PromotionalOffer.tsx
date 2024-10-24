@@ -2,10 +2,10 @@ const PromotionalOffer = () => {
   return (
     <div
       id="promotional-offer"
-      className="max-w-[1440px] mx-auto w-full flex flex-col justify-center items-center lg:gap-32 sm:gap-10 gap-5 mt-[7rem] md:mt-10 2xl:px-[75px] xl:px-7 px-6"
+      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full lg:py-20 py-12 lg:gap-32 sm:gap-10 gap-5 2xl:px-[75px] xl:px-7 px-5"
     >
       <div className="flex sm:flex-row flex-col w-full xl:h-[614px] lg:h-[500px] md:h-[370px] sm:h-[340px] h-full sm:rounded-[30px] rounded-2xl bg-secondary/5 relative overflow-hidden">
-        <div className="flex flex-col sm:justify-center h-full w-full xl:max-w-[32rem] lg:max-w-[29rem] md:max-w-[20rem] sm:max-w-[15.5rem] xl:gap-4 lg:gap-3 sm:gap-2 gap-3 text-left xl:pl-24 lg:pl-16 md:pl-12 sm:pl-8 p-10 sm:p-0">
+        <div className="flex flex-col sm:justify-center sm:items-start items-center h-full w-full xl:max-w-[32rem] lg:max-w-[29rem] md:max-w-[20rem] sm:max-w-[15.5rem] xl:gap-4 lg:gap-3 sm:gap-2 gap-3 sm:text-left text-center xl:pl-24 lg:pl-16 md:pl-12 sm:pl-10 p-7 sm:p-0">
           <p className="font-bold xl:text-xl lg:text-lg md:text-[16px] sm:text-sm tracking-widest text-secondary">
             Try for Free
           </p>

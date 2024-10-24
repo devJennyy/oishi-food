@@ -8,7 +8,7 @@ const MainPage = () => {
   return (
     <div
       id="homepage"
-      className="flex flex-col pb-20 lg:gap-28 md:gap-20"
+      className="flex flex-col"
     >
       <Hero />
       <Menu />
