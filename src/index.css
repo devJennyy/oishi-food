@@ -56,3 +56,54 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.swiper-pagination {
+  display: flex;
+  padding-left: 1rem;
+  margin-bottom: 3px;
+  width: 0;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  width: fit-content;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(255, 85, 85, 1) !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 85, 85);
+}
+
+.swiper-nav-btns .swiper-button-next,
+.swiper-nav-btns .swiper-button-prev {
+  background-color: rgba(255, 85, 85, 1) !important;
+}
+
+.swiper-nav-btns .swiper-button-next.swiper-button-disabled,
+.swiper-nav-btns .swiper-button-prev.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .swiper-pagination {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
