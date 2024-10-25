@@ -9,7 +9,7 @@ const Testimonials = () => {
   const testimonalsData = [
     {
       feedback:
-        "OmniFood serves the best ramen I've ever tasted! The broth was rich and savory, with just the right balance of flavors. The noodles were perfectly chewy, and the toppings—especially the soft-boiled egg and chashu pork—were exceptional. Every bowl is a comforting experience that keeps me coming back for more!",
+        "OmniFood serves the best ramen I've ever tasted! The noodles were perfectly chewy, and there were plenty of fresh toppings, especially the soft-boiled egg and flavorful chashu pork were exceptional. Every bowl is a comforting experience that keeps me coming back for more!",
       rating: "5.0",
       name: "Frieren Elfwyn",
       title: "Customer",
@@ -25,7 +25,7 @@ const Testimonials = () => {
     },
     {
       feedback:
-        "I recently tried OishiFood, and I’m thoroughly impressed! The ramen was rich and flavorful. The soup had a homemade feel. And to top it all off, the dessert was simply divine—a sweet ending that left me craving more. Highly recommend OishiFood for anyone looking for authentic and delicious flavors!",
+        "I recently tried OishiFood, and I’m thoroughly impressed! The ramen was rich and flavorful. The soup had a homemade feel. And the dessert was a divine—sweet that left me craving more. Highly recommend OishiFood for anyone looking for authentic and delicious flavors!",
       rating: "4.9",
       name: "Nezuko Kamado",
       title: "Customer",
@@ -84,7 +84,7 @@ const Testimonials = () => {
           {testimonalsData?.map((data) => {
             return (
               <SwiperSlide>
-                <div className="flex flex-col gap-4 w-full rounded-[2rem] p-7 border border-secondary mb-14">
+                <div className="flex flex-col gap-4 w-full rounded-[2rem] p-7 border border-secondary md:mb-0 mb-14">
                   <img
                     src="/favicons/quotation-mark.svg"
                     className="w-10 xl:w-10 md:w-8"
