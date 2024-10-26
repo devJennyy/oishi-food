@@ -26,7 +26,7 @@ const HowItWorks = () => {
 			subtitle: "Delivery",
       description:
         "Enter your address, choose a payment method, and confirm your order. Our friendly rider will deliver your meal and may call you upon arrival to ensure a smooth handoff! You'll be able to track your order in real-time for added convenience.",
-      image: "/images/step-one-guide.png",
+      image: "/images/step-three-guide.png",
       padding: "lg:pl-0 lg:pl-10"
     },
   ];
