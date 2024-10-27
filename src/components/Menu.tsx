@@ -1,23 +1,26 @@
+import { FaStar } from "react-icons/fa";
+
 const ramenMenu = [
   {
     image: "/images/ramen-dish-one.svg",
-    title: "Spicy Garlic Ramen",
-    description:
-      "Chunky rayu broth, roasted pork, spring onion, bamboo shoots, bonito, marinated egg and noodles.",
-  },
-  {
-    image: "/images/ramen-dish-two.svg",
     title: "Sesame Veggie Ramen",
     description:
-      "Spicy miso broth, tofu, coriander, spring onion, bamboo shoots, marinated egg and noodles.",
-    imageSize: "320px",
+      "Chunky rayu broth, roasted pork, spring onion, bamboo shoots, bonito, marinated egg and noodles.",
+    rating: "5.0",
   },
-  {
-    image: "/images/ramen-dish-three.svg",
-    title: "Spicy Kimchi Ramen",
-    description:
-      "Shoyu broth, roasted pork, spring onion, coriander, kimchi, marinated egg and noodles.",
-  },
+  // {
+  //   image: "/images/ramen-dish-two.svg",
+  //   title: "Sesame Veggie Ramen",
+  //   description:
+  //     "Spicy miso broth, tofu, coriander, spring onion, bamboo shoots, marinated egg and noodles.",
+  //   imageSize: "320px",
+  // },
+  // {
+  //   image: "/images/ramen-dish-three.svg",
+  //   title: "Spicy Kimchi Ramen",
+  //   description:
+  //     "Shoyu broth, roasted pork, spring onion, coriander, kimchi, marinated egg and noodles.",
+  // },
 ];
 
 const Menu = () => {
@@ -73,6 +76,35 @@ const Menu = () => {
             <p className="lg:max-w-[243px] lg:text-[16px] text-sm h-20">
               {item.description}
             </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center items-center w-fit h-full mt-10 md:hidden">
+        {ramenMenu.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col justify-center items-center w-[173px] h-[201px] border border-secondary/10 shadow-sm backdrop-blur-sm gap-4 rounded-[20px] mt-16"
+          >
+            <div className="flex items-center h-[136px] w-[136px] mt-[-4rem]">
+              <img
+                src={item.image}
+                className="h-fit object-cover"
+              />
+            </div>
+            <div className="flex flex-col items-center justify-between w-full gap-2 mt-[2px]">
+              <div className="flex justify-center items-center gap-1 text-amberGlow">
+                <FaStar size={11} />
+                <p className="font-semibold leading-3 text-[12px]">{item.rating}</p>
+              </div>
+              <p className="text-secondary font-bold text-[11px] tracking-wide">
+                {item.title}
+              </p>
+              <p className="text-[7px] tracking-wider max-w-[115px] w-full">{item.description}</p>
+            </div>
+            <button className="py-[5px] px-4 bg-secondary w-fit rounded-full mt-1 active:scale-95 transition-all duration-300 ease-in-out">
+              <p className="capitalize text-white text-[10px] font-light tracking-wider">Order Now</p>
+            </button>
           </div>
         ))}
       </div>
