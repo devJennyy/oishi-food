@@ -69,7 +69,6 @@ body {
 
 .swiper-pagination {
   display: flex;
-  padding-left: 1rem;
   margin-bottom: 3px;
   width: 0;
 }
@@ -105,5 +104,12 @@ body {
   .swiper-pagination {
     left: 50% !important;
     transform: translateX(-50%) !important;
+    padding-left: -1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination {
+    padding-left: 1rem;
   }
 }

@@ -3,11 +3,16 @@ import { RiMotorbikeFill } from "react-icons/ri";
 
 const Hero = () => {
   const buttons = [
-    { text: "Order Now", style: "bg-secondary text-white", linkTo: "#promotional-offer", },
+    {
+      text: "Order Now",
+      style: "bg-secondary text-white hover:bg-transparent hover:text-secondary border border-secondary hover:shadow-glow-secondary active:scale-95 transition-all duration-300 ease-in-out",
+      linkTo: "#promotional-offer",
+    },
+    
     {
       text: "Explore Food",
       style:
-        "border border-secondary dark:border-white text-secondary dark:text-white",
+        "border border-secondary dark:border-white hover:dark:border-secondary hover:dark:text-secondary text-secondary dark:text-white hover:shadow-glow-secondary active:scale-95 transition-all duration-300 ease-in-out",
       icon: <IoIosArrowRoundForward size={24} />,
       linkTo: "#menu",
     },
@@ -50,7 +55,8 @@ const Hero = () => {
 
         <div className="flex sm:flex-row flex-col lg:gap-4 gap-3 xl:text-lg lg:text-lg md:text-sm text-lg lg:mt-7 sm:mt-4 mt-6">
           {buttons.map((button, index) => (
-            <a href={button.linkTo}
+            <a
+              href={button.linkTo}
               key={index}
               className={`flex justify-center items-center gap-1 w-full h-12 lg:max-w-[10.5rem] lg:h-[3.2rem] sm:max-w-[9.5rem] sm:h-[3rem] md:max-w-[7rem] md:h-[2.5rem] rounded-full ${button.style}`}
             >

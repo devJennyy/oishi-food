@@ -21,6 +21,9 @@ module.exports = {
         amberGlow: "#F6AA1C",
         lightGray: "#EDEDED",
       },
+      boxShadow: {
+        'glow-secondary': '0px 4px 15px rgba(245, 71, 72, 0.2)',
+      },
     },
   },
   plugins: [],

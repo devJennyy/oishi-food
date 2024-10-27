@@ -16,8 +16,8 @@ const PromotionalOffer = () => {
             Savor the best hot & tasty ramen with OmniFood, delivered straight
             to your door in no time!
           </p>
-          <button className="xl:px-7 xl:py-4 lg:px-6 lg:py-3 md:px-5 sm:py-2 sm:px-4 px-5 py-[11px] bg-secondary/90 rounded-full w-fit">
-            <p className="xl:text-xl lg:text-lg md:text-[16px] sm:text-[13px] text-white">
+          <button className="xl:px-7 xl:py-4 lg:px-6 lg:py-3 md:px-5 sm:py-2 sm:px-4 px-5 py-[11px] text-white w-fit rounded-full bg-secondary dark:hover:shadow-glow-secondary hover:scale-105 hover:bg-transparent border border-secondary hover:text-secondary active:scale-95 transition-all duration-300 ease-in-out">
+            <p className="xl:text-xl lg:text-lg md:text-[16px] sm:text-[13px]">
               Get The App
             </p>
           </button>

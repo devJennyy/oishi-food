@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex gap-4">
           <a
             href="#promotional-offer"
-            className="py-[9px] px-7 bg-secondary text-white rounded-full"
+            className="py-[9px] px-7 rounded-full bg-secondary text-white hover:bg-transparent hover:text-secondary border border-secondary dark:hover:shadow-glow-secondary active:scale-95 transition-all duration-300 ease-in-out"
           >
             <p>Try for free</p>
           </a>
