@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
-import DarkModeToggle from "./DarkModeToggle";
+import DarkModeToggle from "../UI/DarkModeToggle";
 
 const navLinks = [{ label: "Our Menu", href: "#menu" },
   { label: "Testimonials", href: "#testimonials" },
