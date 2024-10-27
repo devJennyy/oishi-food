@@ -63,12 +63,12 @@ const Menu = () => {
             className="flex flex-col justify-center items-center w-[320px] gap-4"
           >
             <div className="flex items-center lg:h-[320px] h-[210px]">
-              <img
+              {/* <img
                 src={item.image}
                 className={`h-fit object-cover ${
                   item.imageSize || "xl:w-[295px] lg:w-[270px] md:w-[190px]"
                 }`}
-              />
+              /> */}
             </div>
             <p className="text-secondary text-2xl font-semibold xl:mt-9 lg:mt-3 mt-3 lg:h-9 h-16">
               {item.title}
