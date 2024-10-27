@@ -84,26 +84,26 @@ const Menu = () => {
         {ramenMenu.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center w-[173px] h-[201px] border border-secondary/10 shadow-sm backdrop-blur-sm gap-4 rounded-[20px] mt-16"
+            className="flex flex-col justify-center items-center w-[203px] h-[231px] border border-secondary/10 shadow-sm backdrop-blur-sm gap-4 rounded-[20px] mt-20"
           >
-            <div className="flex items-center h-[136px] w-[136px] mt-[-4rem]">
+            <div className="flex items-center h-[166px] w-[166px] mt-[-6rem]">
               <img
                 src={item.image}
                 className="h-fit object-cover"
               />
             </div>
-            <div className="flex flex-col items-center justify-between w-full gap-2 mt-[2px]">
+            <div className="flex flex-col items-center justify-between w-full gap-2 mt-2">
               <div className="flex justify-center items-center gap-1 text-amberGlow">
-                <FaStar size={11} />
-                <p className="font-semibold leading-3 text-[12px]">{item.rating}</p>
+                <FaStar size={12} />
+                <p className="font-semibold leading-3 text-[15px]">{item.rating}</p>
               </div>
-              <p className="text-secondary font-bold text-[11px] tracking-wide">
+              <p className="text-secondary font-bold text-sm tracking-wide">
                 {item.title}
               </p>
-              <p className="text-[7px] tracking-wider max-w-[115px] w-full">{item.description}</p>
+              <p className="text-[10px] tracking-wide max-w-[135px] w-full">{item.description}</p>
             </div>
-            <button className="py-[5px] px-4 bg-secondary w-fit rounded-full mt-1 active:scale-95 transition-all duration-300 ease-in-out">
-              <p className="capitalize text-white text-[10px] font-light tracking-wider">Order Now</p>
+            <button className="py-2 px-5 bg-secondary w-fit rounded-full mt-1 active:scale-95 transition-all duration-300 ease-in-out">
+              <p className="capitalize text-white text-[13px] font-light tracking-wider">Order Now</p>
             </button>
           </div>
         ))}
