@@ -84,8 +84,8 @@ const Menu = () => {
         {ramenMenu.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center w-[243px] h-[281px] border border-secondary/10 shadow-sm backdrop-blur-sm gap-4 rounded-[30px] mt-20 
-            bg-gradient-to-b from-secondary/20 to-white bg-no-repeat hover:border-none"
+            className="flex flex-col justify-center items-center w-[243px] h-[281px] border border-secondary/5 shadow-md  gap-4 rounded-[30px] mt-20 
+            hover:bg-gradient-to-b from-secondary/20 to-white bg-no-repeat hover:border-none active:scale-95 transition-all duration-500 ease-in-out"
           >
             <div className="flex items-center h-[180px] w-[180px] mt-[-4.5rem]">
               <img src={item.image} className="h-fit object-cover" />
@@ -104,7 +104,7 @@ const Menu = () => {
                 {item.description}
               </p>
             </div>
-            <button className="py-[10px] px-8 bg-secondary w-fit rounded-full mt-1 active:scale-95 transition-all duration-300 ease-in-out">
+            <button className="py-[10px] px-8 bg-secondary w-fit rounded-full mt-1">
               <p className="capitalize text-white text-sm font-light tracking-wider">
                 Order Now
               </p>
