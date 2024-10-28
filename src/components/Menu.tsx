@@ -1,4 +1,4 @@
-import { FaStar } from "react-icons/fa";
+import { IoIosStar } from "react-icons/io";
 
 const ramenMenu = [
   {
@@ -84,26 +84,30 @@ const Menu = () => {
         {ramenMenu.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center items-center w-[243px] h-[271px] border border-secondary/10 shadow-sm backdrop-blur-sm gap-4 rounded-[30px] mt-20"
+            className="flex flex-col justify-center items-center w-[243px] h-[281px] border border-secondary/10 shadow-sm backdrop-blur-sm gap-4 rounded-[30px] mt-20 
+            bg-gradient-to-b from-secondary/20 to-white bg-no-repeat hover:border-none"
           >
             <div className="flex items-center h-[180px] w-[180px] mt-[-4.5rem]">
-              <img
-                src={item.image}
-                className="h-fit object-cover"
-              />
+              <img src={item.image} className="h-fit object-cover" />
             </div>
             <div className="flex flex-col items-center justify-between w-full gap-2 mt-2">
               <div className="flex justify-center items-center gap-1 text-amberGlow">
-                <FaStar size={12} />
-                <p className="font-semibold leading-3 text-[15px]">{item.rating}</p>
+                <IoIosStar />
+                <p className="font-semibold leading-3 text-[15px]">
+                  {item.rating}
+                </p>
               </div>
               <p className="text-secondary font-bold text-[17px]">
                 {item.title}
               </p>
-              <p className="text-[11px] tracking-wide px-7 w-full">{item.description}</p>
+              <p className="text-[11px] tracking-wide px-7 w-full">
+                {item.description}
+              </p>
             </div>
-            <button className="py-2 px-5 bg-secondary w-fit rounded-full mt-1 active:scale-95 transition-all duration-300 ease-in-out">
-              <p className="capitalize text-white text-[13px] font-light tracking-wider">Order Now</p>
+            <button className="py-[10px] px-8 bg-secondary w-fit rounded-full mt-1 active:scale-95 transition-all duration-300 ease-in-out">
+              <p className="capitalize text-white text-sm font-light tracking-wider">
+                Order Now
+              </p>
             </button>
           </div>
         ))}
