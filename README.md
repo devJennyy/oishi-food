@@ -2,7 +2,7 @@
 
 👩‍💻 **Work in Progress**
 
-Oishifood is a fully responsive e-commerce landing page designed for food products, featuring both light and dark mode options. Built with React, TypeScript, and Tailwind CSS. I also designed the hi-fi prototypes for both the website and mobile app using Figma. For dynamic interactions, I implemented Framer Motion for animations and integrated Embla Carousel for smooth carousel.
+Oishifood is a fully responsive e-commerce landing page designed for food products, featuring both light and dark mode options. Built with React, TypeScript, and Tailwind CSS. I also designed the hi-fi prototypes for both the website and mobile app using Figma. For dynamic interactions, I implemented Framer Motion for animations and integrated SwiperJs for smooth carousel.
 
 ---
 
