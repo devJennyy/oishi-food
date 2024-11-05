@@ -1,0 +1,55 @@
+:root {
+    --fill: #F54748; 
+  }
+  
+  .root.light {
+    --fill: #F54748;
+  }
+  
+  html,
+  body,
+  .root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 200ms ease-in-out;
+  }
+  
+  .mode {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14px; 
+    height: 14px; 
+    border-radius: 24px;
+    background: var(--background);
+    transform: scale(3); 
+    transition: background 200ms ease-in-out; 
+  }
+  
+  .mode:hover {
+    background: rgba(245, 71, 72, 0.1); 
+    width: 14px;
+    height: 14px;
+  }
+  
+  .mode .custom-sun,
+  .mode .custom-moon {
+    position: absolute; 
+    width: 10px; 
+    height: 10px; 
+    fill: var(--fill); 
+    transition: transform 200ms ease-in-out; 
+    z-index: 1; 
+  }
+  
+  .dark .custom-sun {
+    transform: scale(0.1);
+  }
+  
+
+  .light .custom-moon {
+    transform: scale(0.5);
+  }
+  
