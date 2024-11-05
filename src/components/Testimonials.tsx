@@ -84,7 +84,7 @@ const Testimonials = () => {
           {testimonalsData?.map((data) => {
             return (
               <SwiperSlide>
-                <div className="flex flex-col gap-4 w-full rounded-[2rem] p-7 border border-secondary md:mb-0 mb-14">
+                <div className="flex flex-col gap-4 w-full rounded-[2rem] p-7 border border-secondary md:mb-0 mb-14 cursor-grab">
                   <img
                     src="/favicons/quotation-mark.svg"
                     className="w-10 xl:w-10 md:w-8"
