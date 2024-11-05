@@ -4,7 +4,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import "./App.css";
+import "./css/App.css";
 import Header from "./components/Layout/Header";
 import MainPage from "./pages/MainPage";
 import Footer from "./components/Layout/Footer";
