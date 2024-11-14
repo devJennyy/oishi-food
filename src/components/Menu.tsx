@@ -129,13 +129,13 @@ const Menu = () => {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        className="mySwiper sm:hidden"
+        className="mySwiper sm:hidden menu-swiper"
       >
         {ramenMenu.map((item, index) => {
           return (
             <SwiperSlide key={index}>
               <div
-                className="flex flex-col justify-center items-center w-[253px] h-[300px] border border-secondary/5 shadow-md  gap-4 rounded-[30px] mt-24 mb-8  
+                className="test flex flex-col justify-center items-center w-[253px] h-[300px] border border-secondary/5 shadow-md  gap-4 rounded-[30px] mt-24 mb-8  
              hover:bg-gradient-to-b from-secondary/10 to-white bg-no-repeat hover:border-none active:scale-95 transition-all duration-500 ease-in-out"
               >
                 <div className="flex items-center h-[190px] w-[190px] mt-[-4.5rem]">
