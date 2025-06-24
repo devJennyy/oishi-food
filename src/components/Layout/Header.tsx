@@ -3,6 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 import DarkModeToggle from "../UI/DarkModeToggle";
+import Button from "../shared/Button";
 
 const navLinks = [{ label: "Our Menu", href: "#menu" },
   { label: "Testimonials", href: "#testimonials" },
@@ -40,12 +41,12 @@ const Header = () => {
           </a>
         ))}
         <div className="flex gap-4">
-          <a
-            href="#promotional-offer"
-            className="py-[9px] px-7 rounded-full bg-secondary text-white hover:bg-transparent hover:text-secondary border border-secondary dark:hover:shadow-glow-secondary active:scale-95 transition-all duration-300 ease-in-out"
-          >
-            <p>Try for free</p>
-          </a>
+          <Button
+            label={"Try for free"}
+            href={"#promotional-offer"}
+            style={"primary"}
+            customClass="w-44"
+          />
           <DarkModeToggle />
         </div>
       </nav>

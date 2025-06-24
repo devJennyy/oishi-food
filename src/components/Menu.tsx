@@ -2,29 +2,9 @@ import { FaStar } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import { ramenMenu } from "../constants/data";
 
-const ramenMenu = [
-  {
-    image: "/images/ramen-dish-one.svg",
-    title: "Sesame Veggie Ramen",
-    description:
-      "Chunky rayu broth, roasted pork, spring onion, bamboo shoots, bonito, marinated egg and noodles.",
-    rating: "5.0",
-  },
-  {
-    image: "/images/ramen-dish-two.svg",
-    title: "Sesame Veggie Ramen",
-    description:
-      "Spicy miso broth, tofu, coriander, spring onion, bamboo shoots, marinated egg and noodles.",
-    imageSize: "320px",
-  },
-  {
-    image: "/images/ramen-dish-three.svg",
-    title: "Spicy Kimchi Ramen",
-    description:
-      "Shoyu broth, roasted pork, spring onion, coriander, kimchi, marinated egg and noodles.",
-  },
-];
+
 
 const Menu = () => {
   return (
@@ -129,13 +109,13 @@ const Menu = () => {
           delay: 4000,
           disableOnInteraction: false,
         }}
-        className="mySwiper sm:hidden menu-swiper"
+        className="mySwiper md:hidden menu-swiper"
       >
         {ramenMenu.map((item, index) => {
           return (
             <SwiperSlide key={index}>
               <div
-                className="test flex flex-col justify-center items-center w-[253px] h-[300px] border border-secondary/5 shadow-md  gap-4 rounded-[30px] mt-24 mb-8  
+                className="w-1/2 mx-10 flex flex-col justify-center items-center h-[300px] border border-secondary/5 shadow-md  gap-4 rounded-[30px] mt-24 mb-8  
              hover:bg-gradient-to-b from-secondary/10 to-white bg-no-repeat hover:border-none active:scale-95 transition-all duration-500 ease-in-out"
               >
                 <div className="flex items-center h-[190px] w-[190px] mt-[-4.5rem]">

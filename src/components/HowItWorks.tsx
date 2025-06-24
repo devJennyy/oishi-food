@@ -1,35 +1,7 @@
+import { howItWorks } from "../constants/data";
+
 const HowItWorks = () => {
-  const guideSteps = [
-    {
-      numberCount: 1,
-      title: "Choose Your",
-			subtitle: "Food",
-      description:
-        "Open the OishiFood app and browse the available options. Pick the dishes you want and add them to your cart, exploring a variety of delicious meals tailored to your cravings.",
-      image: "/images/step-one-guide.png",
-      padding: "lg:pl-0 lg:pl-10"
-    },
-    {
-      numberCount: 2,
-      title: "Review and",
-			subtitle: "Customize",
-      description:
-        "Review your order and make any necessary adjustments, like changing toppings or spice levels. If you have any specific preferences, feel free to add special instructions for the kitchen. Then, proceed to checkout.",
-      image: "/images/step-two-guide.png",
-      stepsPosition: "sm:flex-row-reverse flex-col",
-      classname: "xl:pl-48",
-      padding: "lg:pr-0 lg:pr-10"
-    },
-    {
-      numberCount: 3,
-      title: "Payment and",
-			subtitle: "Delivery",
-      description:
-        "Enter your address, choose a payment method, and confirm your order. Our friendly rider will deliver your meal and may call you upon arrival to ensure a smooth handoff! You'll be able to track your order in real-time for added convenience.",
-      image: "/images/step-three-guide.png",
-      padding: "lg:pl-0 lg:pl-10"
-    },
-  ];
+  
   return (
     <div
       id="how-it-works"
@@ -44,9 +16,9 @@ const HowItWorks = () => {
         </p>
       </div>
       <div className="flex flex-col xl:gap-20 sm:gap-0 gap-10 w-full">
-        {guideSteps?.map((step) => {
+        {howItWorks?.map((step, index) => {
           return (
-            <div
+            <div key={index}
               className={`flex w-full xl:h-[30rem] lg:h-[28rem] sm:h-[24rem] h-[37rem] xl:px-10 ${
                 step.stepsPosition ? step.stepsPosition : "sm:flex-row flex-col"
               }`}

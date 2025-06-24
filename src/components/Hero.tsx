@@ -1,29 +1,13 @@
-import { IoIosArrowRoundForward } from "react-icons/io";
 import { RiMotorbikeFill } from "react-icons/ri";
+import Button from "./shared/Button";
 
 const Hero = () => {
-  const buttons = [
-    {
-      text: "Order Now",
-      style: "bg-secondary text-white hover:bg-transparent hover:text-secondary border border-secondary hover:shadow-glow-secondary active:scale-95 transition-all duration-300 ease-in-out",
-      linkTo: "#promotional-offer",
-    },
-    
-    {
-      text: "Explore Food",
-      style:
-        "border border-secondary dark:border-white hover:dark:border-secondary hover:dark:text-secondary text-secondary dark:text-white hover:shadow-glow-secondary active:scale-95 transition-all duration-300 ease-in-out",
-      icon: <IoIosArrowRoundForward size={24} />,
-      linkTo: "#menu",
-    },
-  ];
-
   return (
     <div
       id="hero"
-      className="flex md:flex-row flex-col justify-between max-w-[1440px] w-full mx-auto 2xl:px-[75px] xl:px-7 px-5 relative overflow-x-hidden overflow-y-scroll no-scrollbar sm:pb-10 pb-5"
+      className="sm:pt-36 pt-24 flex md:flex-row flex-col justify-between max-w-[1440px] w-full mx-auto 2xl:px-[75px] xl:px-7 px-5 relative overflow-x-hidden overflow-y-scroll no-scrollbar sm:pb-10 pb-5"
     >
-      <div className="flex flex-col text-left gap-4 xl:pt-[250px] lg:pt-48 md:pt-32 sm:pt-48 pt-32">
+      <div className="md:w-1/2 w-full flex flex-col justify-center text-left gap-4">
         <div className="flex justify-center items-center gap-2 py-2 px-3 bg-secondary/10 w-fit rounded-full lg:mb-3 sm:mb-0 mb-2">
           <div className="bg-secondary rounded-full p-1">
             <RiMotorbikeFill className="text-white lg:text-sm text-[12px]" />
@@ -54,27 +38,27 @@ const Hero = () => {
         </div>
 
         <div className="flex sm:flex-row flex-col lg:gap-4 gap-3 xl:text-lg lg:text-lg md:text-sm text-lg lg:mt-7 sm:mt-4 mt-6">
-          {buttons.map((button, index) => (
-            <a
-              href={button.linkTo}
-              key={index}
-              className={`flex justify-center items-center gap-1 w-full h-12 lg:max-w-[10.5rem] lg:h-[3.2rem] sm:max-w-[9.5rem] sm:h-[3rem] md:max-w-[7rem] md:h-[2.5rem] rounded-full ${button.style}`}
-            >
-              <p>{button.text}</p>
-              <div className="sm:hidden">{button.icon}</div>
-            </a>
-          ))}
+          <Button
+            label={"Order Now"}
+            href={"#promotional-offer"}
+            style={"primary"}
+            customClass="sm:w-44 w-full"
+          />
+          <Button
+            label={"Explore Food"}
+            href={"#menu"}
+            style={"secondary"}
+            customClass="sm:w-44 w-full"
+          />
         </div>
       </div>
 
-      <div className="relative xl:pt-44 lg:pt-[190px] pt-36 md:flex hidden">
-        <div className="w-full max-w-full xl:pr-10 xl:pt-0 lg:pt-4">
-          <img
-            src="/images/sample.png"
-            className="w-full h-full relative z-20"
-            alt="Sample Food"
-          />
-        </div>
+      <div className="w-1/2 p-10 md:flex hidden">
+        <img
+          src="/images/sample.png"
+          className="w-full h-full relative z-20"
+          alt="Sample Food"
+        />
       </div>
     </div>
   );

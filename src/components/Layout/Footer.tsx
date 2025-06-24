@@ -78,9 +78,9 @@ const Footer = () => {
             </p>
           </div>
           <div className="grid grid-cols-5 sm:mt-3 xl:gap-0 lg:gap-4">
-            {socialIcons?.map((icon) => {
+            {socialIcons?.map((icon, index) => {
               return (
-                <div className="flex justify-center items-center xl:w-[46px] xl:h-[46px] lg:w-[40px] lg:h-[40px] md:w-[31px] md:h-[31px] w-[40px] h-[40px] lg:rounded-xl md:rounded-lg rounded-xl text-secondary bg-secondary/10 dark:bg-secondary/0 dark:border-secondary dark:border cursor-pointer hover:scale-110 transition-all active:scale-95 duration-300 ease-in-out">
+                <div key={index} className="flex justify-center items-center xl:w-[46px] xl:h-[46px] lg:w-[40px] lg:h-[40px] md:w-[31px] md:h-[31px] w-[40px] h-[40px] lg:rounded-xl md:rounded-lg rounded-xl text-secondary bg-secondary/10 dark:bg-secondary/0 dark:border-secondary dark:border cursor-pointer hover:scale-110 transition-all active:scale-95 duration-300 ease-in-out">
                   {icon}
                 </div>
               );
@@ -100,8 +100,8 @@ const Footer = () => {
             >
               <p className="font-bold sm:text-lg sm:mb-1">{data.header}</p>
               <div className="flex flex-col xl:gap-4 gap-3 xl:text-sm text-[12px]">
-                {data.content.map((item, idx) => (
-                  <ParagraphComponent key={idx}>{item}</ParagraphComponent>
+                {data.content.map((item, index) => (
+                  <ParagraphComponent key={index}>{item}</ParagraphComponent>
                 ))}
               </div>
             </div>
@@ -109,9 +109,9 @@ const Footer = () => {
           <div className="sm:flex flex-col h-full text-left gap-4 xl:w-[200px] lg:w-[160px] w-[130px] hidden">
             <p className="font-bold text-lg mb-1">Get app</p>
             <div className="flex flex-col lg:gap-3 gap-2 text-primary/60 dark:text-white/60 text-sm">
-              {downloadButton?.map((button) => {
+              {downloadButton?.map((button, index) => {
                 return (
-                  <button className="flex justify-center items-center xl:h-[3rem] lg:h-[2.5rem] lg:w-full md:w-[7.5rem] h-[2.3rem] bg-primary rounded-lg text-white active:scale-95 transition-all duration-400 ease-in-out">
+                  <button key={index} className="flex justify-center items-center xl:h-[3rem] lg:h-[2.5rem] lg:w-full md:w-[7.5rem] h-[2.3rem] bg-primary rounded-lg text-white active:scale-95 transition-all duration-400 ease-in-out">
                     <img
                       src={button.image}
                       alt={button.alt}
@@ -125,9 +125,9 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col lg:gap-3 gap-2 text-primary/60 dark:text-white/60 text-sm sm:hidden mt-4">
-          {downloadButton?.map((button) => {
+          {downloadButton?.map((button, index) => {
             return (
-              <button className="flex justify-center items-center xl:h-[3rem] lg:h-[2.5rem] lg:w-full md:w-[7.5rem] sm:h-[2.3rem] h-[2.9rem] bg-primary rounded-lg text-white active:scale-95 transition-all duration-400 ease-in-out">
+              <button key={index} className="flex justify-center items-center xl:h-[3rem] lg:h-[2.5rem] lg:w-full md:w-[7.5rem] sm:h-[2.3rem] h-[2.9rem] bg-primary rounded-lg text-white active:scale-95 transition-all duration-400 ease-in-out">
                 <img
                   src={button.image}
                   alt={button.alt}
