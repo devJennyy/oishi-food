@@ -163,7 +163,7 @@ const Menu = () => {
               onMouseLeave={() => setActiveIndex(null)}
               animate={{ scale: activeIndex === index ? 1.05 : 1 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="relative xl:w-[340px] w-[300px] xl:h-[390px] h-[360px] rounded-[40px] flex flex-col border !mt-48 shadow-lg"
+              className="relative xl:w-[340px] w-[300px] xl:h-[390px] h-[360px] rounded-[40px] flex flex-col border dark:border-accent !mt-48 shadow-lg"
             >
               <motion.div
                 initial={false}
@@ -255,7 +255,7 @@ const Menu = () => {
                   animate="visible"
                   whileInView={{ scale: currentIndex === index ? 1.05 : 0.95 }}
                   transition={{ type: "tween", duration: 0.4 }}
-                  className="relative sm:w-[340px] w-[250px] sm:mx-5 mx-3 sm:h-[390px] h-[290px] rounded-[40px] flex flex-col border sm:!mt-[150px] !mt-[120px] sm:mb-20 mb-12"
+                  className="relative sm:w-[340px] w-[250px] sm:mx-5 mx-3 sm:h-[390px] h-[290px] rounded-[40px] flex flex-col border dark:border-accent sm:!mt-[150px] !mt-[120px] sm:mb-20 mb-12"
                 >
                   {currentIndex === index && (
                     <motion.div
