@@ -5,13 +5,13 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import SwiperNavButtons from "./UI/SwiperNavButtons";
 import { testimonalsData } from "../constants/data";
+import SectionHeader from "./shared/SectionHeader";
 
 const Testimonials = () => {
- 
   return (
     <div
       id="testimonials"
-      className="flex justify-center items-center max-w-[1440px] w-full mx-auto lg:py-20 py-12 2xl:gap-32 lg:gap-16 px-5 lg:px-10 md:px-32 sm:px-16 2xl:pr-[7.5rem] xl:pr-[4rem]"
+      className="overflow-visible flex justify-center items-center max-w-[1440px] w-full mx-auto lg:py-20 py-12 2xl:gap-32 lg:gap-16 px-5 lg:px-10 md:px-32 sm:px-16 2xl:pr-[7.5rem] xl:pr-[4rem]"
     >
       <div className="hidden lg:block relative w-full h-full">
         <div className="absolute bottom-[5rem] left-[-3rem] z-[-1]">
@@ -34,15 +34,14 @@ const Testimonials = () => {
       </div>
 
       <div className="flex flex-col xl:w-[596px] lg:w-[450px] w-full h-full items-center lg:items-start gap-2">
-        <p className="font-bold capitalize text-secondary sm:text-xl text-lg tracking-wider">
-          Testimonials
-        </p>
-        <p className="sm:font-bold font-black xl:max-w-[400px] lg:max-w-[350px] text-4xl sm:text-5xl md:text-4xl lg:text-[2rem] xl:text-[2.5rem] sm:leading-tight leading-[2.7rem]">
-          What Our Clients<span className="text-secondary"> Say</span>
-        </p>
+        <SectionHeader
+          label={"Testimonials"}
+          title={"What Our Clients"}
+          highlight={"Say"}
+        />
 
         <Swiper
-           pagination={{
+          pagination={{
             clickable: true,
           }}
           navigation={false}
@@ -54,7 +53,7 @@ const Testimonials = () => {
             delay: 4000,
             disableOnInteraction: false,
           }}
-          modules={[Pagination, Autoplay,]}
+          modules={[Pagination, Autoplay]}
           className="mySwiper"
         >
           {testimonalsData?.map((data, index) => {
@@ -95,7 +94,7 @@ const Testimonials = () => {
               </SwiperSlide>
             );
           })}
-          <SwiperNavButtons/>
+          <SwiperNavButtons />
         </Swiper>
       </div>
     </div>
