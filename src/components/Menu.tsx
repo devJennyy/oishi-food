@@ -102,7 +102,7 @@ const Menu = () => {
           <button
             key={menu}
             onClick={() => setActiveMenu(menu)}
-            className={`px-5 py-[6px] rounded-full border-2 transition-all
+            className={`px-5 py-[6px] rounded-full sm:border-2 border transition-all
             ${
               activeMenu === menu
                 ? "border-accent text-accent dark:text-white"
@@ -110,7 +110,7 @@ const Menu = () => {
             }
           `}
           >
-            <p className="lg:text-base text-sm capitalize font-medium tracking-wide">
+            <p className="lg:text-base text-sm capitalize sm:font-medium tracking-wide">
               {menu}
             </p>
           </button>
@@ -229,103 +229,103 @@ const Menu = () => {
       </AnimatePresence>
 
       <AnimatePresence mode="wait">
-      <motion.div
-        key={activeMenu}
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        exit={{ opacity: 0, y: 40, transition: { duration: 0.4 } }}
-        className="lg:hidden overflow-visible"
-      >
-        <Swiper
-          className="w-full flex lg:hidden overflow-visible"
-          spaceBetween={1}
-          slidesPerView={"auto"}
-          centeredSlides={true}
-          speed={500}
-          initialSlide={middleIndex}
-          onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
-          modules={[Autoplay]}
+        <motion.div
+          key={activeMenu}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit={{ opacity: 0, y: 40, transition: { duration: 0.4 } }}
+          className="lg:hidden overflow-visible"
         >
-          {menu.map((item, index) => (
-            <SwiperSlide key={index} style={{ width: "auto" }}>
-              <motion.div
-                variants={cardVariants}
-                initial="hidden"
-                animate="visible"
-                whileInView={{ scale: currentIndex === index ? 1.05 : 0.87 }}
-                transition={{ type: "tween", duration: 0.4 }}
-                className="relative w-[340px] mx-5 h-[390px] rounded-[40px] flex flex-col border !mt-40 !mb-10"
-              >
-                {currentIndex === index && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.4 }}
-                    className="absolute inset-0 bg-gradient-to-b from-[#F547481F] to-transparent pointer-events-none rounded-[40px] z-0"
-                  />
-                )}
-
-                <div className="h-[30%] w-full z-30 relative">
-                  <div className="w-full h-[250px] mt-[-8rem]">
-                    <motion.img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-contain z-30 relative"
-                      animate={{ rotate: currentIndex === index ? 25 : 0 }}
-                      transition={{
-                        type: "tween",
-                        stiffness: 120,
-                        damping: 10,
-                      }}
+          <Swiper
+            className="w-full flex lg:hidden overflow-visible sm:scale-100 scale-[65%] sm:!mt-0 sm:!mb-10 !mt-[-7rem] !mb-[-6rem]"
+            spaceBetween={1}
+            slidesPerView={"auto"}
+            centeredSlides={true}
+            speed={500}
+            initialSlide={middleIndex}
+            onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
+            modules={[Autoplay]}
+          >
+            {menu.map((item, index) => (
+              <SwiperSlide key={index} style={{ width: "auto" }}>
+                <motion.div
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileInView={{ scale: currentIndex === index ? 1.05 : 0.95 }}
+                  transition={{ type: "tween", duration: 0.4 }}
+                  className="relative w-[340px] mx-5 h-[390px] rounded-[40px] flex flex-col border !mt-40 !mb-10"
+                >
+                  {currentIndex === index && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.4 }}
+                      className="absolute inset-0 bg-gradient-to-b from-[#F547481F] to-transparent pointer-events-none rounded-[40px] z-0"
                     />
-                  </div>
-                </div>
+                  )}
 
-                <div className="flex-1 flex flex-col gap-5 p-7">
-                  <div className="flex flex-col items-center">
-                    <p className="text-2xl font-bold text-accent">{item.title}</p>
-                    <div className="flex items-center gap-1 text-amberGlow sm:mb-0 mb-[2px]">
-                      <FaStar className="text-sm xl:text-[15px]" />
-                      <p className="font-black leading-3 text-[15px] sm:text-lg">
-                        {item.rating}
+                  <div className="h-[30%] w-full z-30 relative">
+                    <div className="w-full h-[250px] mt-[-8rem]">
+                      <motion.img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-contain z-30 relative"
+                        animate={{ rotate: currentIndex === index ? 25 : 0 }}
+                        transition={{
+                          type: "tween",
+                          stiffness: 120,
+                          damping: 10,
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex-1 flex flex-col gap-5 p-7">
+                    <div className="flex flex-col items-center">
+                      <p className="text-2xl font-bold text-accent">
+                        {item.title}
                       </p>
+                      <div className="flex items-center gap-1 text-amberGlow sm:mb-0 mb-[2px]">
+                        <FaStar className="text-sm xl:text-[15px]" />
+                        <p className="font-black leading-3 text-[15px] sm:text-lg">
+                          {item.rating}
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="text-left text-sm">{item.description}</p>
+
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-center gap-3">
+                        <FaFire />
+                        <p>{item.calories} calories</p>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <LuUtensilsCrossed />
+                        <p>NutriScore ® {item.nutriScore}</p>
+                      </div>
                     </div>
                   </div>
 
-                  <p className="text-left text-sm">{item.description}</p>
-
-                  <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-3">
-                      <FaFire />
-                      <p>{item.calories} calories</p>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <LuUtensilsCrossed />
-                      <p>NutriScore ® {item.nutriScore}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {currentIndex === index && (
-                  <motion.button
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute bottom-[-1.5rem] left-0 right-0 mx-auto h-11 w-36 rounded-full bg-accent flex justify-center items-center"
-                  >
-                    <p className="text-lg text-white">Order Now</p>
-                  </motion.button>
-                )}
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </motion.div>
-    </AnimatePresence>
-
-      
+                  {currentIndex === index && (
+                    <motion.button
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute bottom-[-1.5rem] left-0 right-0 mx-auto h-11 w-36 rounded-full bg-accent flex justify-center items-center"
+                    >
+                      <p className="text-lg text-white">Order Now</p>
+                    </motion.button>
+                  )}
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
