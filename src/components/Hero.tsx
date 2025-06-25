@@ -8,11 +8,11 @@ const Hero = () => {
       className="sm:pt-36 pt-24 flex md:flex-row flex-col justify-between max-w-[1440px] w-full mx-auto 2xl:px-[75px] xl:px-7 px-5 relative overflow-x-hidden overflow-y-scroll no-scrollbar sm:pb-10 pb-5"
     >
       <div className="md:w-1/2 w-full flex flex-col justify-center text-left gap-4">
-        <div className="flex justify-center items-center gap-2 py-2 px-3 bg-secondary/10 w-fit rounded-full lg:mb-3 sm:mb-0 mb-2">
-          <div className="bg-secondary rounded-full p-1">
+        <div className="flex justify-center items-center gap-2 py-2 px-3 bg-accent/10 w-fit rounded-full lg:mb-3 sm:mb-0 mb-2">
+          <div className="bg-accent rounded-full p-1">
             <RiMotorbikeFill className="text-white lg:text-sm text-[12px]" />
           </div>
-          <p className="text-secondary dark:text-white lg:text-sm text-sm pr-2">
+          <p className="text-accent dark:text-white lg:text-sm text-sm pr-2">
             Fast Delivery
           </p>
         </div>
@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="sm:max-w-[36rem] max-w-[20rem] w-full">
           <p className="font-black xl:text-[3.7rem] lg:text-[3.3rem] md:text-[2.4rem] tracking-tight sm:tracking-normal sm:text-[3.5rem] text-[2.6rem] lg:leading-[4.7rem] md:leading-[3.5rem] sm:leading-[4.5rem]">
             Your Favourite Food Delivered{" "}
-            <span className="text-secondary">Hot</span> &{" "}
+            <span className="text-accent">Hot</span> &{" "}
             <span className="text-tertiary">Fresh</span>.
           </p>
           <img

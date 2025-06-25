@@ -24,7 +24,7 @@ const Menu = () => {
       </p>
 
       <div className="flex lg:gap-7 gap-5 mt-4">
-        <button className="px-5 py-2 rounded-full lg:border-2 border border-secondary text-secondary dark:text-white tracking-wide">
+        <button className="px-5 py-2 rounded-full lg:border-2 border border-accent text-accent dark:text-white tracking-wide">
           <p className="lg:text-[16px] text-sm">Ramen</p>
         </button>
         <button className="px-5 py-2 rounded-full lg:border-2 border border-primary/40 dark:border-white/40 tracking-wide text-primary/50 dark:text-white/50">
@@ -49,7 +49,7 @@ const Menu = () => {
                 }`}
               />
             </div>
-            <p className="text-secondary text-2xl font-semibold xl:mt-9 lg:mt-3 mt-3 lg:h-9 h-16">
+            <p className="text-accent text-2xl font-semibold xl:mt-9 lg:mt-3 mt-3 lg:h-9 h-16">
               {item.title}
             </p>
             <p className="lg:max-w-[243px] lg:text-[16px] text-sm h-20 capitalize">
@@ -78,8 +78,8 @@ const Menu = () => {
           return (
             <SwiperSlide key={index}>
               <div
-                className="sm:w-1/2 w-full mx-10 flex flex-col justify-center items-center h-[300px] border border-secondary/5 shadow-md  gap-4 rounded-[30px] mt-24 mb-8  
-             hover:bg-gradient-to-b from-secondary/10 to-white bg-no-repeat hover:border-none dark:border-secondary active:scale-95 transition-all duration-500 ease-in-out"
+                className="sm:w-1/2 w-full sm:mx-10 mx-8 flex flex-col justify-center items-center h-[300px] border border-accent/5 shadow-md  gap-4 rounded-[40px] mt-24 mb-8  
+             hover:bg-gradient-to-b from-accent/20 to-white bg-no-repeat active:border-none dark:border-accent transition-all duration-500 ease-in-out"
               >
                 <div className="flex items-center h-[190px] w-[190px] mt-[-4.5rem]">
                   <img src={item.image} className="h-fit object-cover" />
@@ -89,14 +89,14 @@ const Menu = () => {
                     <FaStar size={15} />
                     <p className="font-semibold leading-3">{item.rating}</p>
                   </div>
-                  <p className="text-secondary font-bold text-[17px]">
+                  <p className="text-accent font-bold text-[17px]">
                     {item.title}
                   </p>
                   <p className="text-[12px] tracking-wide max-w-[10rem] w-full">
                     {item.description}
                   </p>
                 </div>
-                <button className="py-[10px] px-8 bg-secondary w-fit rounded-full mt-1">
+                <button className="py-[10px] px-8 bg-accent w-fit rounded-full mt-1">
                   <p className="capitalize text-white text-sm font-light tracking-wider">
                     Order Now
                   </p>

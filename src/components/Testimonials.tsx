@@ -11,7 +11,7 @@ const Testimonials = () => {
   return (
     <div
       id="testimonials"
-      className="overflow-visible flex justify-center items-center max-w-[1440px] w-full mx-auto lg:py-20 py-12 2xl:gap-32 lg:gap-16 px-5 lg:px-10 md:px-32 sm:px-16 2xl:pr-[7.5rem] xl:pr-[4rem]"
+      className="overflow-visible flex justify-center items-center max-w-[1440px] w-full mx-auto lg:py-20 2xl:gap-32 lg:gap-16 lg:px-10 md:px-32 2xl:pr-[7.5rem] xl:pr-[4rem]"
     >
       <div className="hidden lg:block relative w-full h-full">
         <div className="absolute bottom-[5rem] left-[-3rem] z-[-1]">
@@ -54,12 +54,12 @@ const Testimonials = () => {
             disableOnInteraction: false,
           }}
           modules={[Pagination, Autoplay]}
-          className="mySwiper"
+          className="mySwiper md:px-0 sm:px-12 px-5"
         >
           {testimonalsData?.map((data, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="flex flex-col gap-4 w-full rounded-[2rem] p-7 border border-secondary md:mb-0 mb-14 cursor-grab">
+                <div className="flex flex-col gap-4 w-full rounded-[2rem] p-7 border border-accent md:mb-0 mb-14 cursor-grab">
                   <img
                     src="/favicons/quotation-mark.svg"
                     className="w-10 xl:w-10 md:w-8"

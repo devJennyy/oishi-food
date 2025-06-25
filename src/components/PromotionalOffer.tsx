@@ -4,9 +4,9 @@ const PromotionalOffer = () => {
       id="promotional-offer"
       className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full lg:py-20 py-12 lg:gap-32 sm:gap-10 gap-5 2xl:px-[75px] xl:px-7 px-5"
     >
-      <div className="flex sm:flex-row flex-col w-full xl:h-[614px] lg:h-[500px] md:h-[370px] sm:h-[340px] h-full sm:rounded-[30px] rounded-2xl bg-secondary/5 relative overflow-hidden">
+      <div className="flex sm:flex-row flex-col w-full xl:h-[614px] lg:h-[500px] md:h-[370px] sm:h-[340px] h-full sm:rounded-[30px] rounded-2xl bg-accent/5 relative overflow-hidden">
         <div className="flex flex-col sm:justify-center sm:items-start items-center h-full w-full xl:max-w-[32rem] lg:max-w-[29rem] md:max-w-[20rem] sm:max-w-[15.5rem] xl:gap-4 lg:gap-3 sm:gap-2 gap-3 sm:text-left text-center xl:pl-24 lg:pl-16 md:pl-12 sm:pl-10 p-7 sm:p-0">
-          <p className="font-bold xl:text-xl lg:text-lg md:text-[16px] sm:text-sm tracking-widest text-secondary">
+          <p className="font-bold xl:text-xl lg:text-lg md:text-[16px] sm:text-sm tracking-widest text-accent">
             Try for Free
           </p>
           <p className="font-bold xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-3xl xl:leading-[3.5rem] md:leading-normal leading-tight">
@@ -16,7 +16,7 @@ const PromotionalOffer = () => {
             Savor the best hot & tasty ramen with OmniFood, delivered straight
             to your door in no time!
           </p>
-          <button className="xl:px-7 xl:py-4 lg:px-6 lg:py-3 md:px-5 sm:py-2 sm:px-4 px-5 py-[11px] text-white w-fit rounded-full bg-secondary dark:hover:shadow-glow-secondary hover:scale-105 hover:bg-transparent border border-secondary hover:text-secondary active:scale-95 transition-all duration-300 ease-in-out">
+          <button className="xl:px-7 xl:py-4 lg:px-6 lg:py-3 md:px-5 sm:py-2 sm:px-4 px-5 py-[11px] text-white w-fit rounded-full bg-accent dark:hover:shadow-glow-secondary hover:scale-105 hover:bg-transparent border border-accent hover:text-accent active:scale-95 transition-all duration-300 ease-in-out">
             <p className="xl:text-xl lg:text-lg md:text-[16px] sm:text-[13px]">
               Get The App
             </p>
@@ -58,7 +58,7 @@ const PromotionalOffer = () => {
             className="w-fit lg:py-3 lg:px-7 py-2 px-4 bg-white rounded-full drop-shadow-md z-10 absolute xl:bottom-24 xl:right-[33.5rem] lg:bottom-20 lg:right-[26.5rem]
           md:bottom-16 md:right-[17rem] bottom-10 right-[16.5rem]"
           >
-            <p className="text-secondary font-medium 2xl:text-[22px] xl:text-xl lg:text-[16px] md:text-sm text-[10px]">
+            <p className="text-accent font-medium 2xl:text-[22px] xl:text-xl lg:text-[16px] md:text-sm text-[10px]">
               Never cook again!
             </p>
           </div>

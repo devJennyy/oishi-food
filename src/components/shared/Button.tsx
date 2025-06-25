@@ -9,8 +9,8 @@ interface ButtonProps {
 const Button = ({ label, href, icon, customClass, style }: ButtonProps) => {
   const baseClass = "h-14 rounded-full flex justify-center items-center active:scale-95 transition-all duration-300 ease-in-out";
 
-  const primaryStyle = "bg-secondary text-white hover:bg-transparent hover:text-secondary border border-secondary hover:shadow-glow-secondary";
-  const secondaryStyle = "border border-secondary dark:border-white hover:dark:border-secondary hover:dark:text-secondary text-secondary dark:text-white hover:shadow-glow-secondary active:scale-95 transition-all duration-300 ease-in-out";
+  const primaryStyle = "bg-accent text-white hover:bg-transparent hover:text-accent border border-accent hover:shadow-glow-secondary";
+  const secondaryStyle = "border border-accent dark:border-white hover:dark:border-accent hover:dark:text-accent text-accent dark:text-white hover:shadow-glow-secondary active:scale-95 transition-all duration-300 ease-in-out";
 
   const selectedStyle = style === "primary" ? primaryStyle : secondaryStyle;
 

@@ -80,7 +80,7 @@ const Footer = () => {
           <div className="grid grid-cols-5 sm:mt-3 xl:gap-0 lg:gap-4">
             {socialIcons?.map((icon, index) => {
               return (
-                <div key={index} className="flex justify-center items-center xl:w-[46px] xl:h-[46px] lg:w-[40px] lg:h-[40px] md:w-[31px] md:h-[31px] w-[40px] h-[40px] lg:rounded-xl md:rounded-lg rounded-xl text-secondary bg-secondary/10 dark:bg-secondary/0 dark:border-secondary dark:border cursor-pointer hover:scale-110 transition-all active:scale-95 duration-300 ease-in-out">
+                <div key={index} className="flex justify-center items-center xl:w-[46px] xl:h-[46px] lg:w-[40px] lg:h-[40px] md:w-[31px] md:h-[31px] w-[40px] h-[40px] lg:rounded-xl md:rounded-lg rounded-xl text-accent bg-accent/10 dark:bg-accent/0 dark:border-accent dark:border cursor-pointer hover:scale-110 transition-all active:scale-95 duration-300 ease-in-out">
                   {icon}
                 </div>
               );
@@ -145,7 +145,7 @@ const Footer = () => {
             Jenny Pieloor
           </span>{" "}
           |{" "}
-          <span className="text-secondary font-semibold">
+          <span className="text-accent font-semibold">
             All Rights Reserved
           </span>
         </p>

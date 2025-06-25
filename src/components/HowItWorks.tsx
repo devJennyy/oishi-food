@@ -26,12 +26,12 @@ const HowItWorks = () => {
                   step.classname ? step.classname : "pl-0"
                 }`}
               >
-                <p className="text-secondary/50 dark:text-secondary xl:text-[5.8rem] lg:text-[4.5rem] text-[3.7rem] font-black leading-none">
+                <p className="text-accent/50 dark:text-accent xl:text-[5.8rem] lg:text-[4.5rem] text-[3.7rem] font-black leading-none">
                   0{step.numberCount}
                 </p>
                 <p className="xl:text-[2.5rem] lg:text-[2rem] text-2xl font-black capitalize">
                   {step.title}{" "}
-                  <span className="dark:text-tertiary text-secondary">
+                  <span className="dark:text-tertiary text-accent">
                     {step.subtitle}
                   </span>
                 </p>
@@ -42,8 +42,8 @@ const HowItWorks = () => {
               <div
                 className={`flex justify-center items-center xl:w-[45rem] w-full h-full relative sm:mt-0 mt-5 ${step.padding}`}
               >
-                <div className="xl:w-[380px] xl:h-[380px] lg:w-[300px] lg:h-[300px] w-[250px] h-[250px] rounded-full bg-secondary opacity-10 z-10 absolute"></div>
-                <div className="xl:w-[293px] xl:h-[293px] lg:w-[233px] lg:h-[233px] w-[195px] h-[195px] rounded-full bg-secondary opacity-40 z-20 absolute"></div>
+                <div className="xl:w-[380px] xl:h-[380px] lg:w-[300px] lg:h-[300px] w-[250px] h-[250px] rounded-full bg-accent opacity-10 z-10 absolute"></div>
+                <div className="xl:w-[293px] xl:h-[293px] lg:w-[233px] lg:h-[233px] w-[195px] h-[195px] rounded-full bg-accent opacity-40 z-20 absolute"></div>
                 <div className="absolute z-30">
                   <img
                     src={step.image}

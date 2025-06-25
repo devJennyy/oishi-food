@@ -16,7 +16,7 @@ module.exports = {
       colors: {
         darkmode: "#0D0D0D",
         primary: "#191919",
-        secondary: "#F54748",
+        accent: "#F54748",
         tertiary: "#FDC55E",
         amberGlow: "#F6AA1C",
         lightGray: "#EDEDED",
