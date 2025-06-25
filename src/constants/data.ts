@@ -32,7 +32,7 @@ export const howItWorks = [
 
 export const ramenMenu = [
   {
-    image: "/images/ramen-dish-one.svg",
+    image: "/images/ramen-one.png",
     title: "Sesame Veggie Ramen",
     description:
       "Chunky rayu broth, roasted pork, spring onion, bamboo shoots, bonito, marinated egg and noodles.",
@@ -41,7 +41,7 @@ export const ramenMenu = [
     nutriScore: "54",
   },
   {
-    image: "/images/ramen-dish-two.svg",
+    image: "/images/ramen-two.png",
     title: "Sesame Veggie Ramen",
     description:
       "Spicy miso broth, tofu, coriander, spring onion, bamboo shoots, marinated egg and noodles.",
@@ -51,7 +51,7 @@ export const ramenMenu = [
     nutriScore: "72",
   },
   {
-    image: "/images/ramen-dish-three.svg",
+    image: "/images/ramen-three.png",
     title: "Spicy Kimchi Ramen",
     description:
       "Shoyu broth, roasted pork, spring onion, coriander, kimchi, marinated egg and noodles.",
@@ -63,7 +63,7 @@ export const ramenMenu = [
 
 export const sushiMenu = [
   {
-    image: "/images/sushi-one.svg",
+    image: "/images/sushi-one.png",
     title: "Salmon Lover’s Platter",
     description:
       "A fresh and flavorful assortment of salmon sashimi, nigiri, and maki rolls for true salmon enthusiasts.",
@@ -72,17 +72,17 @@ export const sushiMenu = [
     nutriScore: "73",
   },
   {
-    image: "/images/sushi-two.svg",
+    image: "/images/sushi-two.png",
     title: "Tokyo Deluxe Platter",
     description:
-      "A premium mix of shrimp nigiri, salmon sashimi, and assorted rolls, finished with classic Japanese garnishes.",
+      "A mix of shrimp nigiri, salmon sashimi, and assorted rolls, finished with classic Japanese garnishes.",
     imageSize: "320px",
     rating: "5.0",
     calories: "580",
     nutriScore: "68",
   },
   {
-    image: "/images/sushi-three.svg",
+    image: "/images/sushi-three.png",
     title: "Omakase Chef’s Choice",
     description:
       "A chef-curated variety featuring salmon, tuna, shrimp, and scallop nigiri with classic maki rolls.",
@@ -94,7 +94,7 @@ export const sushiMenu = [
 
 export const lunchMenu = [
   {
-    image: "/images/lunch-one.svg",
+    image: "/images/lunch-one.png",
     title: "Garlic Butter Shrimp",
     description:
       "Plump shrimp sautéed in rich garlic butter, served with a sweet and spicy dipping sauce.",
@@ -103,7 +103,7 @@ export const lunchMenu = [
     nutriScore: "64",
   },
   {
-    image: "/images/lunch-two.svg",
+    image: "/images/lunch-two.png",
     title: "Thai Shrimp Fried Rice",
     description:
       "A vibrant dish of jasmine rice stir-fried with shrimp, herbs, lime, and Thai spices.",
@@ -113,7 +113,7 @@ export const lunchMenu = [
     nutriScore: "58",
   },
   {
-    image: "/images/lunch-three.svg",
+    image: "/images/lunch-three.png",
     title: "Seafood Feast Platter",
     description:
       "A deluxe selection of steamed crab, shrimp, mussels, scallops, and whole fish, garnished with herbs and citrus.",

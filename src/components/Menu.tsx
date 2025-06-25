@@ -238,7 +238,7 @@ const Menu = () => {
           className="lg:hidden overflow-visible"
         >
           <Swiper
-            className="w-full flex lg:hidden overflow-visible sm:scale-100 scale-[65%] sm:!mt-0 sm:!mb-10 !mt-[-7rem] !mb-[-6rem]"
+            className="w-full flex lg:hidden overflow-visible sm:mt-0 mt-[-1rem]"
             spaceBetween={1}
             slidesPerView={"auto"}
             centeredSlides={true}
@@ -248,26 +248,26 @@ const Menu = () => {
             modules={[Autoplay]}
           >
             {menu.map((item, index) => (
-              <SwiperSlide key={index} style={{ width: "auto" }}>
+               <SwiperSlide key={index} style={{ width: "auto" }}>
                 <motion.div
                   variants={cardVariants}
                   initial="hidden"
                   animate="visible"
                   whileInView={{ scale: currentIndex === index ? 1.05 : 0.95 }}
                   transition={{ type: "tween", duration: 0.4 }}
-                  className="relative w-[340px] mx-5 h-[390px] rounded-[40px] flex flex-col border !mt-40 !mb-10"
+                  className="relative sm:w-[340px] w-[250px] sm:mx-5 mx-3 sm:h-[390px] h-[290px] rounded-[40px] flex flex-col border sm:!mt-[150px] !mt-[120px] sm:mb-20 mb-12"
                 >
                   {currentIndex === index && (
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.4 }}
-                      className="absolute inset-0 bg-gradient-to-b from-[#F547481F] to-transparent pointer-events-none rounded-[40px] z-0"
+                      className="absolute inset-0 bg-gradient-to-b from-[#F54748]/10 to-transparent pointer-events-none rounded-[40px] z-0"
                     />
                   )}
 
-                  <div className="h-[30%] w-full z-30 relative">
-                    <div className="w-full h-[250px] mt-[-8rem]">
+                  <div className="sm:h-[30%] h-[25%] w-full z-30 relative">
+                    <div className="w-full sm:h-[250px] h-[180px] sm:mt-[-8rem] mt-[-6.5rem]">
                       <motion.img
                         src={item.image}
                         alt={item.title}
@@ -282,22 +282,22 @@ const Menu = () => {
                     </div>
                   </div>
 
-                  <div className="flex-1 flex flex-col gap-5 p-7">
-                    <div className="flex flex-col items-center">
-                      <p className="text-2xl font-bold text-accent">
+                  <div className="flex-1 flex flex-col sm:gap-5 gap-3 sm:p-7 p-5">
+                    <div className="flex flex-col items-center sm:gap-0 gap-1">
+                      <p className="sm:text-2xl text-lg font-bold text-accent">
                         {item.title}
                       </p>
                       <div className="flex items-center gap-1 text-amberGlow sm:mb-0 mb-[2px]">
                         <FaStar className="text-sm xl:text-[15px]" />
-                        <p className="font-black leading-3 text-[15px] sm:text-lg">
+                        <p className="font-black leading-3 text-sm sm:text-lg">
                           {item.rating}
                         </p>
                       </div>
                     </div>
 
-                    <p className="text-left text-sm">{item.description}</p>
+                    <p className="text-left sm:text-sm text-[12px]">{item.description}</p>
 
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col sm:gap-1 sm:text-base text-[12px]">
                       <div className="flex items-center gap-3">
                         <FaFire />
                         <p>{item.calories} calories</p>
@@ -315,9 +315,9 @@ const Menu = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute bottom-[-1.5rem] left-0 right-0 mx-auto h-11 w-36 rounded-full bg-accent flex justify-center items-center"
+                      className="absolute sm:bottom-[-1.5rem] bottom-[-1.3rem] left-0 right-0 mx-auto sm:h-11 sm:w-36 h-[36px] w-28 rounded-full bg-accent flex justify-center items-center"
                     >
-                      <p className="text-lg text-white">Order Now</p>
+                      <p className="sm:text-lg text-[13px] text-white">Order Now</p>
                     </motion.button>
                   )}
                 </motion.div>
