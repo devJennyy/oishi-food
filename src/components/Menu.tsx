@@ -1,11 +1,76 @@
-import { FaStar } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { FaFire, FaStar } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/pagination";
-import { ramenMenu } from "../constants/data";
+import { lunchMenu, ramenMenu, sushiMenu } from "../constants/data";
 import SectionHeader from "./shared/SectionHeader";
+import { LuUtensilsCrossed } from "react-icons/lu";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Menu = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeMenu, setActiveMenu] = useState<string>("ramen");
+  const [lastIndex, setLastIndex] = useState<number | null>(null);
+ const cardWidth =
+  window.innerWidth < 640
+    ? 340 + 72 
+    : 280 + 56;
+
+const getChopstickX = () => {
+  const menu =
+    activeMenu === "ramen"
+      ? ramenMenu
+      : activeMenu === "sushi"
+      ? sushiMenu
+      : lunchMenu;
+
+  const index = activeIndex !== null ? activeIndex : lastIndex;
+
+  if (index === null) return 0;
+
+  const centerOffset = Math.floor((menu.length - 1) / 2);
+  return (index - centerOffset) * cardWidth;
+};
+
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        ease: [0.42, 0, 0.58, 1],
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        staggerChildren: 0.1,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.42, 0, 0.58, 1],
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 50,
+      transition: {
+        duration: 0.3,
+        ease: [0.42, 0, 0.58, 1],
+      },
+    },
+  };
+
   return (
     <div
       id="menu"
@@ -24,88 +89,133 @@ const Menu = () => {
       </p>
 
       <div className="flex lg:gap-7 gap-5 mt-4">
-        <button className="px-5 py-2 rounded-full lg:border-2 border border-accent text-accent dark:text-white tracking-wide">
-          <p className="lg:text-[16px] text-sm">Ramen</p>
-        </button>
-        <button className="px-5 py-2 rounded-full lg:border-2 border border-primary/40 dark:border-white/40 tracking-wide text-primary/50 dark:text-white/50">
-          <p className="lg:text-[16px] text-sm">Desserts</p>
-        </button>
-        <button className="px-5 py-2 rounded-full lg:border-2 border border-primary/40 dark:border-white/40 tracking-wide text-primary/50 dark:text-white/50">
-          <p className="lg:text-[16px] text-sm">Lunch</p>
-        </button>
-      </div>
-
-      <div className="md:flex justify-center items-center xl:gap-20 md:gap-12 w-full h-full xl:mt-16 mt-10 hidden">
-        {ramenMenu?.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col justify-center items-center w-[320px] gap-4"
+        {["ramen", "sushi", "lunch"].map((menu) => (
+          <button
+            key={menu}
+            onClick={() => setActiveMenu(menu)}
+            className={`px-5 py-[6px] rounded-full border-2 transition-all
+            ${
+              activeMenu === menu
+                ? "border-accent text-accent dark:text-white"
+                : "border-primary/40 text-primary/50 dark:border-white/40 dark:text-white/50"
+            }
+          `}
           >
-            <div className="flex items-center lg:h-[320px] h-[210px]">
-              <img
-                src={item.image}
-                className={`h-fit object-cover ${
-                  item.imageSize || "xl:w-[295px] lg:w-[270px] md:w-[190px]"
-                }`}
-              />
-            </div>
-            <p className="text-accent text-2xl font-semibold xl:mt-9 lg:mt-3 mt-3 lg:h-9 h-16">
-              {item.title}
+            <p className="lg:text-base text-sm capitalize font-medium tracking-wide">
+              {menu}
             </p>
-            <p className="lg:max-w-[243px] lg:text-[16px] text-sm h-20 capitalize">
-              {item.description}
-            </p>
-          </div>
+          </button>
         ))}
       </div>
 
-      <Swiper
-        pagination={{
-          clickable: true,
+      <motion.div
+        className="absolute w-full h-80 z-40 flex justify-center pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{
+          x: getChopstickX(),
+          opacity: activeIndex === null ? 0 : 1,
+          rotate: 10,
+          scale: 1,
         }}
-        navigation={false}
-        loop={true}
-        spaceBetween={10}
-        speed={400}
-        effect="slide"
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
+        transition={{
+          duration: 0.35,
+          ease: [0.42, 0, 0.58, 1],
         }}
-        className="mySwiper md:hidden menu-swiper"
       >
-        {ramenMenu.map((item, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <div
-                className="sm:w-1/2 w-full sm:mx-10 mx-8 flex flex-col justify-center items-center h-[300px] border border-accent/5 shadow-md  gap-4 rounded-[40px] mt-24 mb-8  
-             hover:bg-gradient-to-b from-accent/20 to-white bg-no-repeat active:border-none dark:border-accent transition-all duration-500 ease-in-out"
-              >
-                <div className="flex items-center h-[190px] w-[190px] mt-[-4.5rem]">
-                  <img src={item.image} className="h-fit object-cover" />
+        <img
+          src="/images/chopstick.png"
+          alt="chopstick"
+          className="xl:w-[340px] w-[280px] h-full object-contain"
+        />
+      </motion.div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeMenu}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit={{ opacity: 0, y: 40, transition: { duration: 0.4 }}}
+          className="flex xl:gap-14 gap-8 justify-center xl:mt-0 mt-[-1.5rem]"
+        >
+          {(activeMenu === "ramen"
+            ? ramenMenu
+            : activeMenu === "sushi"
+            ? sushiMenu
+            : lunchMenu
+          )?.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              onMouseEnter={() => {
+                setActiveIndex(index);
+                setLastIndex(index);
+              }}
+              onMouseLeave={() => setActiveIndex(null)}
+              animate={{ scale: activeIndex === index ? 1.05 : 1 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              className="relative xl:w-[340px] w-[300px] xl:h-[390px] h-[360px] rounded-[40px] flex flex-col border !mt-48 shadow-lg"
+            >
+              <motion.div
+                initial={false}
+                animate={{
+                  opacity: activeIndex === index ? 1 : 0,
+                }}
+                transition={{ duration: 0.4 }}
+                className="absolute inset-0 bg-gradient-to-b from-[#F547481F] to-transparent pointer-events-none rounded-[40px] z-0"
+              />
+              <div className="xl:h-[30%] w-full z-30 relative">
+                <div className="w-full xl:h-[250px] h-[220px] mt-[-8rem]">
+                  <motion.img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-contain z-30 relative"
+                    animate={{ rotate: activeIndex === index ? 10 : 0 }}
+                    transition={{ type: "tween", stiffness: 120, damping: 10 }}
+                  />
                 </div>
-                <div className="flex flex-col items-center justify-between w-full gap-2 mt-2">
-                  <div className="flex justify-center items-center gap-1 text-amberGlow h-3">
-                    <FaStar size={15} />
-                    <p className="font-semibold leading-3">{item.rating}</p>
-                  </div>
-                  <p className="text-accent font-bold text-[17px]">
-                    {item.title}
-                  </p>
-                  <p className="text-[12px] tracking-wide max-w-[10rem] w-full">
-                    {item.description}
-                  </p>
-                </div>
-                <button className="py-[10px] px-8 bg-accent w-fit rounded-full mt-1">
-                  <p className="capitalize text-white text-sm font-light tracking-wider">
-                    Order Now
-                  </p>
-                </button>
               </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+
+              <div className="flex-1 flex flex-col gap-5 xl:p-7 p-5">
+                <div className="flex flex-col items-center">
+                  <p className="xl:text-2xl text-[22px] font-bold text-accent">{item.title}</p>
+                  <div className="flex items-center gap-1 text-amberGlow sm:mb-0 mb-[2px]">
+                    <FaStar className="text-sm xl:text-[15px]" />
+                    <p className="font-black leading-3 text-[15px] sm:text-lg">
+                      {item.rating}
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-left text-sm">{item.description}</p>
+
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-3">
+                    <FaFire />
+                    <p>{item.calories} calories</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <LuUtensilsCrossed />
+                    <p>NutriScore ® {item.nutriScore}</p>
+                  </div>
+                </div>
+              </div>
+
+              {activeIndex === index && (
+                <motion.button
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute bottom-[-1.5rem] left-0 right-0 mx-auto h-11 w-36 rounded-full bg-accent flex justify-center items-center"
+                >
+                  <p className="text-lg text-white">Order Now</p>
+                </motion.button>
+              )}
+            </motion.div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };
