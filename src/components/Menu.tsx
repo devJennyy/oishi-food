@@ -6,17 +6,16 @@ import SectionHeader from "./shared/SectionHeader";
 import { LuUtensilsCrossed } from "react-icons/lu";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 const Menu = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [activeMenu, setActiveMenu] = useState<string>("ramen");
   const [lastIndex, setLastIndex] = useState<number | null>(null);
- const cardWidth =
-  window.innerWidth < 640
-    ? 340 + 72 
-    : 280 + 56;
+  const cardWidth = window.innerWidth < 640 ? 340 + 72 : 280 + 56;
 
-const getChopstickX = () => {
+  // Determine the menu array based on the activeMenu
   const menu =
     activeMenu === "ramen"
       ? ramenMenu
@@ -24,14 +23,24 @@ const getChopstickX = () => {
       ? sushiMenu
       : lunchMenu;
 
-  const index = activeIndex !== null ? activeIndex : lastIndex;
+  const middleIndex = Math.floor(menu.length / 2);
+  const [currentIndex, setCurrentIndex] = useState(middleIndex);
 
-  if (index === null) return 0;
+  const getChopstickX = () => {
+    const menu =
+      activeMenu === "ramen"
+        ? ramenMenu
+        : activeMenu === "sushi"
+        ? sushiMenu
+        : lunchMenu;
 
-  const centerOffset = Math.floor((menu.length - 1) / 2);
-  return (index - centerOffset) * cardWidth;
-};
+    const index = activeIndex !== null ? activeIndex : lastIndex;
 
+    if (index === null) return 0;
+
+    const centerOffset = Math.floor((menu.length - 1) / 2);
+    return (index - centerOffset) * cardWidth;
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,7 +83,7 @@ const getChopstickX = () => {
   return (
     <div
       id="menu"
-      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full py-12 lg:gap-8 gap-5 2xl:px-[75px] xl:px-7 md:px-5"
+      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full py-12 lg:gap-8 gap-5 2xl:px-[75px] xl:px-7"
     >
       <SectionHeader
         label={"Menu"}
@@ -109,7 +118,7 @@ const getChopstickX = () => {
       </div>
 
       <motion.div
-        className="absolute w-full h-80 z-40 flex justify-center pointer-events-none"
+        className="hidden absolute w-full h-80 z-40 lg:flex justify-center pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{
           x: getChopstickX(),
@@ -135,8 +144,8 @@ const getChopstickX = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          exit={{ opacity: 0, y: 40, transition: { duration: 0.4 }}}
-          className="flex xl:gap-14 gap-8 justify-center xl:mt-0 mt-[-1.5rem]"
+          exit={{ opacity: 0, y: 40, transition: { duration: 0.4 } }}
+          className="lg:flex xl:gap-14 gap-8 justify-center xl:mt-0 mt-[-1.5rem] hidden"
         >
           {(activeMenu === "ramen"
             ? ramenMenu
@@ -178,7 +187,9 @@ const getChopstickX = () => {
 
               <div className="flex-1 flex flex-col gap-5 xl:p-7 p-5">
                 <div className="flex flex-col items-center">
-                  <p className="xl:text-2xl text-[22px] font-bold text-accent">{item.title}</p>
+                  <p className="xl:text-2xl text-[22px] font-bold text-accent">
+                    {item.title}
+                  </p>
                   <div className="flex items-center gap-1 text-amberGlow sm:mb-0 mb-[2px]">
                     <FaStar className="text-sm xl:text-[15px]" />
                     <p className="font-black leading-3 text-[15px] sm:text-lg">
@@ -216,6 +227,105 @@ const getChopstickX = () => {
           ))}
         </motion.div>
       </AnimatePresence>
+
+      <AnimatePresence mode="wait">
+      <motion.div
+        key={activeMenu}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit={{ opacity: 0, y: 40, transition: { duration: 0.4 } }}
+        className="lg:hidden overflow-visible"
+      >
+        <Swiper
+          className="w-full flex lg:hidden overflow-visible"
+          spaceBetween={1}
+          slidesPerView={"auto"}
+          centeredSlides={true}
+          speed={500}
+          initialSlide={middleIndex}
+          onSlideChange={(swiper) => setCurrentIndex(swiper.activeIndex)}
+          modules={[Autoplay]}
+        >
+          {menu.map((item, index) => (
+            <SwiperSlide key={index} style={{ width: "auto" }}>
+              <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                whileInView={{ scale: currentIndex === index ? 1.05 : 0.87 }}
+                transition={{ type: "tween", duration: 0.4 }}
+                className="relative w-[340px] mx-5 h-[390px] rounded-[40px] flex flex-col border !mt-40 !mb-10"
+              >
+                {currentIndex === index && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                    className="absolute inset-0 bg-gradient-to-b from-[#F547481F] to-transparent pointer-events-none rounded-[40px] z-0"
+                  />
+                )}
+
+                <div className="h-[30%] w-full z-30 relative">
+                  <div className="w-full h-[250px] mt-[-8rem]">
+                    <motion.img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-contain z-30 relative"
+                      animate={{ rotate: currentIndex === index ? 25 : 0 }}
+                      transition={{
+                        type: "tween",
+                        stiffness: 120,
+                        damping: 10,
+                      }}
+                    />
+                  </div>
+                </div>
+
+                <div className="flex-1 flex flex-col gap-5 p-7">
+                  <div className="flex flex-col items-center">
+                    <p className="text-2xl font-bold text-accent">{item.title}</p>
+                    <div className="flex items-center gap-1 text-amberGlow sm:mb-0 mb-[2px]">
+                      <FaStar className="text-sm xl:text-[15px]" />
+                      <p className="font-black leading-3 text-[15px] sm:text-lg">
+                        {item.rating}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-left text-sm">{item.description}</p>
+
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-3">
+                      <FaFire />
+                      <p>{item.calories} calories</p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <LuUtensilsCrossed />
+                      <p>NutriScore ® {item.nutriScore}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {currentIndex === index && (
+                  <motion.button
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute bottom-[-1.5rem] left-0 right-0 mx-auto h-11 w-36 rounded-full bg-accent flex justify-center items-center"
+                  >
+                    <p className="text-lg text-white">Order Now</p>
+                  </motion.button>
+                )}
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </motion.div>
+    </AnimatePresence>
+
+      
     </div>
   );
 };
