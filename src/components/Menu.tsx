@@ -103,7 +103,7 @@ const cardWidth = window.innerWidth > 1024 ? 340 + 72 : 280 + 56;
           <button
             key={menu}
             onClick={() => setActiveMenu(menu)}
-            className={`px-5 py-[6px] rounded-full sm:border-2 border transition-all
+            className={`px-5 py-2 rounded-full sm:border-2 border transition-all
             ${
               activeMenu === menu
                 ? "border-accent text-accent dark:text-white"
