@@ -26,7 +26,7 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({ src, className }) => {
       animate={controls}
       whileHover={{
         scale: 1.05,
-        transition: { type: "tween", duration: 0.2 },
+        transition: { type: "tween", duration: 2},
       }}
       variants={{
         hidden: {
