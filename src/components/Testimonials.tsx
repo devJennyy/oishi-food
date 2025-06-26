@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
-import SwiperNavButtons from "./UI/SwiperNavButtons";
+import SwiperNavButtons from "./ui/SwiperNavButtons";
 import { testimonalsData } from "../constants/data";
 import SectionHeader from "./shared/SectionHeader";
 

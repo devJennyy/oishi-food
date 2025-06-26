@@ -5,9 +5,9 @@ import {
   Navigate,
 } from "react-router-dom";
 import "./css/App.css";
-import Header from "./components/Layout/Header";
+import Header from "./components/layout/Header";
 import MainPage from "./pages/MainPage";
-import Footer from "./components/Layout/Footer";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
