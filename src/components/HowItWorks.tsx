@@ -1,4 +1,3 @@
-// components/HowItWorks.tsx
 import { howItWorks } from "../constants/data";
 import SectionHeader from "./shared/SectionHeader";
 import AnimatedImage from "./ui/AnimatedImage";

@@ -149,3 +149,27 @@ export const testimonalsData = [
     image: "/images/avatar-three.svg",
   },
 ];
+
+ export const footerData = [
+    {
+      header: "Contact us",
+      content: [
+        "162 Fairview, 3rd Floor, Oishi Land, OF 2212",
+        "162-222-2212 hello@oishifood.com",
+      ],
+      width: "xl:w-[190px] lg:w-[160px] w-[125px]",
+    },
+    {
+      header: "Account",
+      content: ["Create Account", "Sign in", "iOS app", "Android app"],
+    },
+    {
+      header: "Company",
+      content: [
+        "About OishiFood",
+        "Cooking Partners",
+        "Branch Sites",
+        "Careers",
+      ],
+    },
+  ];
