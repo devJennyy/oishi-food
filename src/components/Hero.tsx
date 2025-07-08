@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="sm:pt-36 pt-24 flex md:flex-row flex-col justify-between max-w-[1440px] w-full mx-auto 2xl:px-[75px] xl:px-7 px-5 relative overflow-x-hidden overflow-y-scroll no-scrollbar sm:pb-10 pb-5"
+      className="sm:pt-36 pt-24 flex md:flex-row flex-col justify-between max-w-[1440px] w-full mx-auto 2xl:px-[75px] xl:px-10 px-5 relative overflow-x-hidden overflow-y-scroll no-scrollbar sm:pb-10 pb-5"
     >
       <div className="md:w-1/2 w-full flex flex-col justify-center text-left gap-4">
         <div className="flex justify-center items-center gap-2 py-2 px-3 bg-accent/10 w-fit rounded-full lg:mb-3 sm:mb-0 mb-2">
@@ -53,7 +53,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-1/2 p-10 md:flex hidden">
+      <div className="w-1/2 pl-10 md:flex hidden">
         <img
           src="/images/sample.png"
           className="w-full h-full relative z-20"

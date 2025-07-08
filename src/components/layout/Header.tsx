@@ -20,7 +20,7 @@ const Header = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="flex justify-between 2xl:px-[75px] xl:px-7 px-5 items-center max-w-[1440px] w-full absolute top-0 sm:py-10 py-5 z-50">
+    <header className="flex justify-between 2xl:px-[75px] xl:px-10 px-5 items-center max-w-[1440px] w-full absolute top-0 sm:py-10 py-5 z-50">
       <div className="h-full">
         <img
           src="/oishi-food-text-logo.svg"

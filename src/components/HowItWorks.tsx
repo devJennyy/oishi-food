@@ -6,7 +6,7 @@ const HowItWorks = () => {
   return (
     <div
       id="how-it-works"
-      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full lg:py-16 py-12 lg:gap-32 sm:gap-10 gap-5 2xl:px-[75px] xl:px-7 px-5"
+      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full lg:py-16 py-12 lg:gap-32 sm:gap-10 gap-5 2xl:px-[75px] xl:px-10 px-5"
     >
       <SectionHeader
         label="How It Works"

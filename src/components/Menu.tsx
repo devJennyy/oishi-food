@@ -84,7 +84,7 @@ const cardWidth = window.innerWidth > 1024 ? 340 + 72 : 280 + 56;
   return (
     <div
       id="menu"
-      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full py-12 lg:gap-8 gap-5 2xl:px-[75px] xl:px-7"
+      className="flex flex-col justify-center items-center max-w-[1440px] mx-auto w-full py-12 lg:gap-8 gap-5 2xl:px-[75px] xl:px-10"
     >
       <SectionHeader
         label={"Menu"}
